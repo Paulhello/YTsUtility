@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.IO;
 
 namespace YTsUtility
 {
@@ -12,10 +13,20 @@ namespace YTsUtility
     /// </summary>
     public class KmlHandle
     {
+        private string m_path;
         /// <summary>
         /// xml文件路径
         /// </summary>
-        public string FilePath {private set; get; }
+        public string FilePath
+        {
+            set {
+                if (File.Exists(value))
+                    m_path = FilePath;
+                else
+                    throw new Exception("File not exist!");
+            }
+            get { return m_path; }
+        }
         XmlDocument doc=new XmlDocument();
         /// <summary>
         /// 构造方法
@@ -27,9 +38,13 @@ namespace YTsUtility
             FilePath = path;
         }
 
-        public void GetAttribute(string attribute)
+        /// <summary>
+        /// 获取属性
+        /// </summary>
+        /// <param name="attribute"></param>
+        public XmlNodeList GetAttribute(string attribute)
         {
-
+            return doc.GetElementsByTagName(attribute);
         }
     }
 }
