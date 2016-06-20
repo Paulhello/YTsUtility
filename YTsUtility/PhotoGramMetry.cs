@@ -352,6 +352,9 @@ namespace YTsUtility
             }
         }
 
+        /// <summary>
+        /// ???
+        /// </summary>
         public class OData2IData
         {
             List<ObjectData> olist;

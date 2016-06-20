@@ -2423,6 +2423,11 @@
             </summary>
             <param name="originfile"></param>
         </member>
+        <member name="T:YTsUtility.PhotoGramMetry.OData2IData">
+            <summary>
+            ???
+            </summary>
+        </member>
         <member name="T:YTsUtility.ErrorMessageBox">
             <summary>
             错误对话框
@@ -2996,6 +3001,12 @@
             构造方法
             </summary>
             <param name="path">xml文件路径</param>
+        </member>
+        <member name="M:YTsUtility.KmlHandle.GetAttribute(System.String)">
+            <summary>
+            获取属性
+            </summary>
+            <param name="attribute"></param>
         </member>
         <member name="T:YTsUtility.Matrix">
             <summary>
