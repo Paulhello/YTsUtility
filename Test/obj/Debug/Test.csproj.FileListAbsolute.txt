@@ -1,0 +1,8 @@
+E:\myc#\我想做的\YTsUtility\Test\bin\Debug\Test.exe.config
+E:\myc#\我想做的\YTsUtility\Test\bin\Debug\Test.exe
+E:\myc#\我想做的\YTsUtility\Test\bin\Debug\Test.pdb
+E:\myc#\我想做的\YTsUtility\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+E:\myc#\我想做的\YTsUtility\Test\obj\Debug\Test.exe
+E:\myc#\我想做的\YTsUtility\Test\obj\Debug\Test.pdb
+E:\myc#\我想做的\YTsUtility\Test\bin\Debug\DLT.dll
+E:\myc#\我想做的\YTsUtility\Test\bin\Debug\DLT.pdb

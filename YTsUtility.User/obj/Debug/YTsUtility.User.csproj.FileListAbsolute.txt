@@ -1,0 +1,13 @@
+E:\myc#\我想做的\YTsUtility\YTsUtility.User\obj\Debug\YTsUtility.User.csprojResolveAssemblyReference.cache
+E:\myc#\我想做的\YTsUtility\YTsUtility.User\obj\Debug\YTsUtility.User.UserLogIn.resources
+E:\myc#\我想做的\YTsUtility\YTsUtility.User\obj\Debug\YTsUtility.User.UserReg.resources
+E:\myc#\我想做的\YTsUtility\YTsUtility.User\obj\Debug\YTsUtility.User.csproj.GenerateResource.Cache
+E:\myc#\我想做的\YTsUtility\YTsUtility.User\bin\Debug\YTsUtility.User.dll
+E:\myc#\我想做的\YTsUtility\YTsUtility.User\bin\Debug\YTsUtility.User.pdb
+E:\myc#\我想做的\YTsUtility\YTsUtility.User\bin\Debug\YTsUtility.dll
+E:\myc#\我想做的\YTsUtility\YTsUtility.User\bin\Debug\YTsUtility.pdb
+E:\myc#\我想做的\YTsUtility\YTsUtility.User\obj\Debug\YTsUtility.User.dll
+E:\myc#\我想做的\YTsUtility\YTsUtility.User\obj\Debug\YTsUtility.User.pdb
+E:\myc#\我想做的\YTsUtility\YTsUtility.User\obj\Debug\YTsUtility.User.UserChange.resources
+E:\myc#\我想做的\YTsUtility\YTsUtility.User\obj\Debug\YTsUtility.User.User.resources
+E:\myc#\我想做的\YTsUtility\YTsUtility.User\bin\Debug\YTsUtility.xml

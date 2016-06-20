@@ -1,0 +1,9 @@
+E:\myc#\我想做的\YTsUtility\transTest\bin\Debug\transTest.exe.config
+E:\myc#\我想做的\YTsUtility\transTest\bin\Debug\transTest.exe
+E:\myc#\我想做的\YTsUtility\transTest\bin\Debug\transTest.pdb
+E:\myc#\我想做的\YTsUtility\transTest\bin\Debug\YTsUtility.dll
+E:\myc#\我想做的\YTsUtility\transTest\bin\Debug\YTsUtility.pdb
+E:\myc#\我想做的\YTsUtility\transTest\bin\Debug\YTsUtility.xml
+E:\myc#\我想做的\YTsUtility\transTest\obj\Debug\transTest.exe
+E:\myc#\我想做的\YTsUtility\transTest\obj\Debug\transTest.pdb
+E:\myc#\我想做的\YTsUtility\transTest\obj\Debug\transTest.csprojResolveAssemblyReference.cache

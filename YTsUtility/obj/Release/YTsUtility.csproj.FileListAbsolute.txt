@@ -1,0 +1,13 @@
+E:\myc#\我想做的\YTsUtility\YTsUtility\obj\Release\YTsUtility.csproj.ResolveComReference.cache
+E:\myc#\我想做的\YTsUtility\YTsUtility\obj\Release\YTsUtility.About.resources
+E:\myc#\我想做的\YTsUtility\YTsUtility\obj\Release\YTsUtility.ErrorMessageBox.resources
+E:\myc#\我想做的\YTsUtility\YTsUtility\obj\Release\YTsUtility.Waiting.resources
+E:\myc#\我想做的\YTsUtility\YTsUtility\obj\Release\YTsUtility.csproj.GenerateResource.Cache
+E:\myc#\我想做的\YTsUtility\YTsUtility\obj\Release\YTsUtility.YTsProgress.resources
+E:\myc#\我想做的\YTsUtility\YTsUtility\obj\Release\YTsUtility.csprojResolveAssemblyReference.cache
+E:\myc#\我想做的\YTsUtility\YTsUtility\bin\Release\YTsUtility.dll
+E:\myc#\我想做的\YTsUtility\YTsUtility\bin\Release\YTsUtility.pdb
+E:\myc#\我想做的\YTsUtility\YTsUtility\obj\Release\YTsUtility.dll
+E:\myc#\我想做的\YTsUtility\YTsUtility\obj\Release\YTsUtility.pdb
+E:\myc#\我想做的\YTsUtility\YTsUtility\bin\Release\YTsUtility.XML
+E:\myc#\我想做的\YTsUtility\YTsUtility\bin\Release\Microsoft.Office.Interop.Excel.dll

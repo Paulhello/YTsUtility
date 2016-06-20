@@ -1,0 +1,12 @@
+E:\myc#\我想做的\YTsUtility\手写数字识别系统\bin\Release\手写数字识别系统.exe.config
+E:\myc#\我想做的\YTsUtility\手写数字识别系统\bin\Release\手写数字识别系统.exe
+E:\myc#\我想做的\YTsUtility\手写数字识别系统\bin\Release\手写数字识别系统.pdb
+E:\myc#\我想做的\YTsUtility\手写数字识别系统\bin\Release\YTsUtility.dll
+E:\myc#\我想做的\YTsUtility\手写数字识别系统\bin\Release\YTsUtility.pdb
+E:\myc#\我想做的\YTsUtility\手写数字识别系统\bin\Release\YTsUtility.xml
+E:\myc#\我想做的\YTsUtility\手写数字识别系统\obj\Release\手写数字识别系统.csprojResolveAssemblyReference.cache
+E:\myc#\我想做的\YTsUtility\手写数字识别系统\obj\Release\手写数字识别系统.Main_FRM.resources
+E:\myc#\我想做的\YTsUtility\手写数字识别系统\obj\Release\手写数字识别系统.Properties.Resources.resources
+E:\myc#\我想做的\YTsUtility\手写数字识别系统\obj\Release\手写数字识别系统.csproj.GenerateResource.Cache
+E:\myc#\我想做的\YTsUtility\手写数字识别系统\obj\Release\手写数字识别系统.exe
+E:\myc#\我想做的\YTsUtility\手写数字识别系统\obj\Release\手写数字识别系统.pdb

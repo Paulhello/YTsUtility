@@ -1,0 +1,52 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using YTsUtility.ImageProcess;
+using System.Drawing;
+using YTsUtility;
+using Dlt=DLT.DLT ;
+using DLT;
+using System.IO;
+
+namespace Test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //byte[] btest = { 1, 2, 3, 4, 5, 6, 7, 8, 9,0,1,2,3,4,5,6,7,8,9,0 };
+            //ImageProcessing imgpr = new ImageProcessing(new Bitmap(100,100));
+            //var exbtest = imgpr.ExpandBorder(btest, 3, 10, 2);
+            //for (int i = 0; i < 6;++i )
+            //{
+            //    for (int j = 0; j < 21; ++j)
+            //        Console.Write(exbtest[i * 21 + j]+" ");
+            //    Console.WriteLine();
+            //}
+            //Vector2 v1 = new Vector2(2, 4), v2 = new Vector2(3, 5), v3 = new Vector2(2, 4);
+            //Vector3 v4 = new Vector3(1, 2, 3), v5 = new Vector3(0, -3, 2), v6 = new Vector3(1, 2, 3);
+            //Console.Write(v1 + v2);
+            //Console.WriteLine(v4 * v2);
+            //Console.WriteLine(v1 == v3);
+            //Console.Write(v4 + v5);
+            //Console.WriteLine(v4 * v5);
+            //Console.WriteLine(v4.XMultpy(v5));
+            //Console.WriteLine(v5.XMultpy(v4).XMultpy(v5));
+            //Console.WriteLine(v4 == v6);
+            //Quaternions q = new Quaternions(3, 1, 0, 0), q1 = new Quaternions(0, 5, 1, -2);
+            //Console.WriteLine(q * q1);
+            //Console.WriteLine((50.5).GetHashCode() + " " + (50.5).GetHashCode());
+            //Vector3 v = new Vector3(0,2,0); Vector2 v1 = new Vector2(0,1);
+           // Console.WriteLine((q*q1).ToMatrix());
+            CData data = new CData();
+            data.ReadData("p1.txt", "p2.txt");
+            Dlt dlt = new Dlt(data);
+            dlt.Adjustment();
+            Console.Write(dlt.OutToString());
+            File.WriteAllText("rel.txt", dlt.OutToString(), Encoding.Default);
+            Console.ReadKey();
+        }
+    }
+}

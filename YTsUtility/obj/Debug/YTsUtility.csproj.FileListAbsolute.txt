@@ -1,0 +1,15 @@
+E:\myc#\我想做的\YTsUtility\YTsUtility\bin\Debug\YTsUtility.dll
+E:\myc#\我想做的\YTsUtility\YTsUtility\bin\Debug\YTsUtility.pdb
+E:\myc#\我想做的\YTsUtility\YTsUtility\obj\Debug\YTsUtility.dll
+E:\myc#\我想做的\YTsUtility\YTsUtility\obj\Debug\YTsUtility.pdb
+E:\myc#\我想做的\YTsUtility\YTsUtility\bin\Debug\YTsUtility.XML
+E:\myc#\我想做的\YTsUtility\YTsUtility\obj\Debug\YTsUtility.About.resources
+E:\myc#\我想做的\YTsUtility\YTsUtility\obj\Debug\YTsUtility.csproj.GenerateResource.Cache
+E:\myc#\我想做的\YTsUtility\YTsUtility\obj\Debug\YTsUtility.ErrorMessageBox.resources
+E:\myc#\我想做的\YTsUtility\YTsUtility\obj\Debug\YTsUtility.Waiting.resources
+E:\myc#\我想做的\YTsUtility\YTsUtility\obj\Debug\YTsUtility.csprojResolveAssemblyReference.cache
+E:\myc#\我想做的\YTsUtility\YTsUtility\bin\Debug\YTsUtility.dll.CodeAnalysisLog.xml
+E:\myc#\我想做的\YTsUtility\YTsUtility\bin\Debug\YTsUtility.dll.lastcodeanalysissucceeded
+E:\myc#\我想做的\YTsUtility\YTsUtility\obj\Debug\YTsUtility.YTsProgress.resources
+E:\myc#\我想做的\YTsUtility\YTsUtility\obj\Debug\YTsUtility.csproj.ResolveComReference.cache
+E:\myc#\我想做的\YTsUtility\YTsUtility\bin\Debug\Microsoft.Office.Interop.Excel.dll

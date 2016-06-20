@@ -1,0 +1,12 @@
+E:\myc#\我想做的\YTsUtility\ImageTest\bin\Release\ImageTest.exe.config
+E:\myc#\我想做的\YTsUtility\ImageTest\bin\Release\ImageTest.exe
+E:\myc#\我想做的\YTsUtility\ImageTest\bin\Release\ImageTest.pdb
+E:\myc#\我想做的\YTsUtility\ImageTest\bin\Release\YTsUtility.dll
+E:\myc#\我想做的\YTsUtility\ImageTest\bin\Release\YTsUtility.pdb
+E:\myc#\我想做的\YTsUtility\ImageTest\bin\Release\YTsUtility.xml
+E:\myc#\我想做的\YTsUtility\ImageTest\obj\Release\ImageTest.csprojResolveAssemblyReference.cache
+E:\myc#\我想做的\YTsUtility\ImageTest\obj\Release\ImageTest.Form1.resources
+E:\myc#\我想做的\YTsUtility\ImageTest\obj\Release\ImageTest.Properties.Resources.resources
+E:\myc#\我想做的\YTsUtility\ImageTest\obj\Release\ImageTest.csproj.GenerateResource.Cache
+E:\myc#\我想做的\YTsUtility\ImageTest\obj\Release\ImageTest.exe
+E:\myc#\我想做的\YTsUtility\ImageTest\obj\Release\ImageTest.pdb

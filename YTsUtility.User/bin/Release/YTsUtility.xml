@@ -1,0 +1,3860 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YTsUtility</name>
+    </assembly>
+    <members>
+        <member name="T:YTsUtility.About">
+            <summary>
+            关于对话框
+            </summary>
+        </member>
+        <member name="M:YTsUtility.About.#ctor">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="M:YTsUtility.About.Show(System.String,System.String,System.String)">
+            <summary>
+            显示对话框
+            </summary>
+            <param name="product">产品名</param>
+            <param name="writer">作者</param>
+            <param name="date">日期</param>
+        </member>
+        <member name="F:YTsUtility.About.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:YTsUtility.About.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:YTsUtility.About.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:YTsUtility.Adjustment">
+            <summary>
+            平差类
+            </summary>
+        </member>
+        <member name="M:YTsUtility.Adjustment.#ctor(YTsUtility.Matrix,YTsUtility.Matrix,YTsUtility.Matrix,YTsUtility.Matrix,YTsUtility.Matrix)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="B">x的系数阵</param>
+            <param name="P">权阵</param>
+            <param name="l">l</param>
+            <param name="L0">初值L0</param>
+            <param name="X0">初值X0</param>
+        </member>
+        <member name="M:YTsUtility.Adjustment.#ctor(YTsUtility.Matrix,YTsUtility.Matrix,YTsUtility.Matrix,YTsUtility.Matrix)">
+            <summary>
+            构造实例
+            </summary>
+            <param name="B"></param>
+            <param name="P"></param>
+            <param name="l"></param>
+            <param name="X0"></param>
+        </member>
+        <member name="M:YTsUtility.Adjustment.Calculate(System.Int32)">
+            <summary>
+            平差计算
+            <param name="mode">0表示完整计算，其他表示不需观测值平差值的计算</param>
+            </summary>
+        </member>
+        <member name="M:YTsUtility.Adjustment.IsTerminating(System.Double)">
+            <summary>
+            确认是否终止迭代
+            </summary>
+            <param name="accurate"></param>
+            <returns></returns>
+        </member>
+        <member name="P:YTsUtility.Adjustment.B">
+            <summary>
+            系数矩阵B
+            </summary>
+        </member>
+        <member name="P:YTsUtility.Adjustment.P">
+            <summary>
+            权阵P
+            </summary>
+        </member>
+        <member name="P:YTsUtility.Adjustment.l">
+            <summary>
+            l
+            </summary>
+        </member>
+        <member name="P:YTsUtility.Adjustment.L0">
+            <summary>
+            初值L0
+            </summary>
+        </member>
+        <member name="P:YTsUtility.Adjustment.X0">
+            <summary>
+            初值X0
+            </summary>
+        </member>
+        <member name="P:YTsUtility.Adjustment.QXX">
+            <summary>
+            Qxx^,x的谐因数阵
+            </summary>
+        </member>
+        <member name="P:YTsUtility.Adjustment.QLL">
+            <summary>
+            QLL^,L的协因数阵
+            </summary>
+        </member>
+        <member name="P:YTsUtility.Adjustment.x">
+            <summary>
+            X的改正项
+            </summary>
+        </member>
+        <member name="P:YTsUtility.Adjustment.X">
+            <summary>
+            平差后的X^
+            </summary>
+        </member>
+        <member name="P:YTsUtility.Adjustment.L">
+            <summary>
+            平差后的L^
+            </summary>
+        </member>
+        <member name="P:YTsUtility.Adjustment.v">
+            <summary>
+            v=Bx-l
+            </summary>
+        </member>
+        <member name="P:YTsUtility.Adjustment.Qvv">
+            <summary>
+            v的协因数阵
+            </summary>
+        </member>
+        <member name="T:YTsUtility.Angle">
+            <summary>
+            角度类
+            </summary>
+        </member>
+        <member name="M:YTsUtility.Angle.#ctor(System.Int32,System.Int32,System.Double,System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="Du">度</param>
+            <param name="Fen">分</param>
+            <param name="Miao">秒</param>
+            <param name="IsPositive">是否为正</param>
+        </member>
+        <member name="M:YTsUtility.Angle.#ctor(System.Double)">
+            <summary>
+            通过DDFFMM.MM构造角度
+            </summary>
+            <param name="f"></param>
+        </member>
+        <member name="M:YTsUtility.Angle.#ctor">
+            <summary>
+            构造一个实例
+            </summary>
+        </member>
+        <member name="M:YTsUtility.Angle.op_Addition(YTsUtility.Angle,YTsUtility.Angle)">
+            <summary>
+            角度相加
+            </summary>
+            <param name="a1"></param>
+            <param name="a2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Angle.op_Subtraction(YTsUtility.Angle,YTsUtility.Angle)">
+            <summary>
+            角度相减
+            </summary>
+            <param name="a1"></param>
+            <param name="a2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Angle.op_Modulus(YTsUtility.Angle,YTsUtility.Angle)">
+            <summary>
+            角度求余
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Angle.Carry(YTsUtility.Angle)">
+            <summary>
+            进位
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Angle.Back(YTsUtility.Angle)">
+            <summary>
+            退位
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Angle.ChangeToDouble">
+            <summary>
+            转换成浮点型ddffmm.mm
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Angle.ChangeToMiao">
+            <summary>
+            转换成秒
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Angle.MChangeToAngle(System.Double)">
+            <summary>
+            将秒转换成角度类
+            </summary>
+            <param name="miao"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Angle.ChangeToInt">
+            <summary>
+            转换为整型ddffmm
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Angle.ChangeToRad">
+            <summary>
+            转换为弧度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Angle.Set_Accurate(System.Int32)">
+            <summary>
+            秒精确到小数点后几位
+            </summary>
+            <param name="n"></param>
+        </member>
+        <member name="M:YTsUtility.Angle.ToString">
+            <summary>
+            重载ToString,转换为每个元素的字符串相加
+            </summary>
+            <returns>角度</returns>
+        </member>
+        <member name="M:YTsUtility.Angle.ToFormatString(System.Int32)">
+            <summary>
+            转换为字符串，保留到小数点后n位
+            </summary>
+            <param name="n">保留到小数点后n位</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Angle.Clone">
+            <summary>
+            对外提供一个复制能力
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Angle.ChangeToRad(System.Double)">
+            <summary>
+            角度化弧度
+            </summary>
+            <param name="Angle">DDFFMM.MMM</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Angle.ChangeToDu">
+            <summary>
+            转换成度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Angle.ChangeToAngle(System.Double)">
+            <summary>
+            弧度转换成角度类
+            </summary>
+            <param name="rad"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Angle.GetPangle(YTsUtility.Angle,YTsUtility.Angle,YTsUtility.Methods.Direction)">
+            <summary>
+            计算方位角
+            </summary>
+            <param name="PAngle0">已知方位角</param>
+            <param name="ObservedAngle">观测角</param>
+            <param name="direction">角方向</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Angle.Get_IncludedAngle(YTsUtility.Angle,YTsUtility.Angle,YTsUtility.Methods.Direction)">
+            <summary>
+            计算夹角
+            </summary>
+            <param name="P_pre"></param>
+            <param name="P_pos"></param>
+            <param name="direction"></param>
+            <returns></returns>
+        </member>
+        <member name="P:YTsUtility.Angle.Du">
+            <summary>
+            度
+            </summary>
+        </member>
+        <member name="P:YTsUtility.Angle.Fen">
+            <summary>
+            分
+            </summary>
+        </member>
+        <member name="P:YTsUtility.Angle.Miao">
+            <summary>
+            秒
+            </summary>
+        </member>
+        <member name="T:YTsUtility.CoordinateT">
+            <summary>
+            二维坐标变换类
+            </summary>
+        </member>
+        <member name="M:YTsUtility.CoordinateT.#ctor(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            直接通过变换4参数构造
+            </summary>
+            <param name="m">比例因子</param>
+            <param name="xita">旋转角</param>
+            <param name="dx">x0</param>
+            <param name="dy">y0</param>
+        </member>
+        <member name="M:YTsUtility.CoordinateT.Change(YTsUtility._2D_Point)">
+            <summary>
+            坐标变换
+            </summary>
+            <param name="p">需要变换的点</param>
+            <returns>变换后的点</returns>
+        </member>
+        <member name="M:YTsUtility.CoordinateT.Change(System.Collections.Generic.List{YTsUtility._2D_Point})">
+            <summary>
+            坐标变换
+            </summary>
+            <param name="ps">需要变换的点表</param>
+            <returns>变换后的点表</returns>
+        </member>
+        <member name="M:YTsUtility.CoordinateT.#ctor(System.Collections.Generic.List{YTsUtility._2D_Point},System.Collections.Generic.List{YTsUtility._2D_Point},System.Int32)">
+            <summary>
+            通过新旧坐标表构造，至少两个点
+            </summary>
+            <param name="pold">旧坐标表</param>
+            <param name="pnew">新坐标表</param>
+            <param name="mode">默认为0(迭代求解)，其他时候(直接求解)</param>
+        </member>
+        <member name="P:YTsUtility.CoordinateT.m">
+            <summary>
+            比例系数，使用时为(1+m)
+            </summary>
+        </member>
+        <member name="P:YTsUtility.CoordinateT.xita">
+            <summary>
+            旋转角
+            </summary>
+        </member>
+        <member name="P:YTsUtility.CoordinateT.dx">
+            <summary>
+            Δx
+            </summary>
+        </member>
+        <member name="P:YTsUtility.CoordinateT.dy">
+            <summary>
+            Δy
+            </summary>
+        </member>
+        <member name="P:YTsUtility.CoordinateT.xigema">
+            <summary>
+            单位权中误差
+            </summary>
+        </member>
+        <member name="T:YTsUtility.CoordinateT3">
+            <summary>
+            三维坐标变换类
+            </summary>
+        </member>
+        <member name="M:YTsUtility.CoordinateT3.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="dx">dx</param>
+            <param name="dy">dy</param>
+            <param name="dz">dz</param>
+            <param name="m">比例系数,(1+m)</param>
+            <param name="ex">x转角</param>
+            <param name="ey">y转角</param>
+            <param name="ez">z转角</param>
+        </member>
+        <member name="M:YTsUtility.CoordinateT3.Change(YTsUtility._3D_Point)">
+            <summary>
+            坐标变换
+            </summary>
+            <param name="p">原坐标</param>
+            <returns>新坐标</returns>
+        </member>
+        <member name="M:YTsUtility.CoordinateT3.Change(System.Collections.Generic.List{YTsUtility._3D_Point})">
+            <summary>
+            批量坐标变换
+            </summary>
+            <param name="ps">旧坐标表</param>
+            <returns>新坐标表</returns>
+        </member>
+        <member name="M:YTsUtility.CoordinateT3.#ctor(System.Collections.Generic.List{YTsUtility._3D_Point},System.Collections.Generic.List{YTsUtility._3D_Point})">
+            <summary>
+            通过新旧坐标表构造，三个点以上
+            </summary>
+            <param name="pold">旧坐标表</param>
+            <param name="pnew">新坐标表</param>
+        </member>
+        <member name="P:YTsUtility.CoordinateT3.X0">
+            <summary>
+            变换参数X0
+            </summary>
+        </member>
+        <member name="P:YTsUtility.CoordinateT3.xigema">
+            <summary>
+            单位权中误差
+            </summary>
+        </member>
+        <member name="T:YTsUtility.GeodeticSurveying.Ellipse">
+            <summary>
+            椭球
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.Ellipse.Klinefelter">
+            <summary>
+            克氏椭球
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.Ellipse.International1975">
+            <summary>
+            1975国际椭球
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.Ellipse.WGS84">
+            <summary>
+            WGS-84
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.Ellipse.CGCS2000">
+            <summary>
+            中国2000
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.Ellipse.Other">
+            <summary>
+            其他
+            </summary>
+        </member>
+        <member name="T:YTsUtility.GeodeticSurveying.CoordinateTrans">
+            <summary>
+            坐标转换类
+            </summary>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.CoordinateTrans.#ctor(YTsUtility.GeodeticSurveying.Ellipse,System.Double,System.Double)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="elp">椭球类型</param>
+            <param name="a">椭球参数a(如果为自定义的椭球)</param>
+            <param name="b">椭球参数b(如果为自定义的椭球)</param>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.CoordinateTrans.B2Xy(System.Double)">
+            <summary>
+            大地到子午面坐标系
+            </summary>
+            <param name="B">大地纬度</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.CoordinateTrans.Batch_B2Xy(System.Collections.Generic.List{System.Double})">
+            <summary>
+            批量转换
+            </summary>
+            <param name="Bs">纬度的集合（弧度）</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.CoordinateTrans.Blh2Xyz(YTsUtility.GeodeticSurveying.Geodetic_Point)">
+            <summary>
+            大地坐标到空间直角坐标
+            </summary>
+            <param name="BLH">大地坐标</param>
+            <returns>直角坐标</returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.CoordinateTrans.Batch_Blh2Xyz(System.Collections.Generic.List{YTsUtility.GeodeticSurveying.Geodetic_Point})">
+            <summary>
+            批量大地坐标到空间直角坐标
+            </summary>
+            <param name="BLHs">大地坐标组</param>
+            <returns>直角坐标组</returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.CoordinateTrans.Xyz2Blh(YTsUtility._3D_Point,System.Int32)">
+            <summary>
+            空间直角坐标到大地坐标
+            </summary>
+            <param name="XYZ">直接坐标</param>
+            <param name="mode">计算模式，默认为0（迭代法），其他为直接法</param>
+            <returns>大地坐标</returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.CoordinateTrans.Batch_Xyz2Blh(System.Collections.Generic.List{YTsUtility._3D_Point})">
+            <summary>
+            批量空间直角坐标到大地坐标
+            </summary>
+            <param name="XYZs">直角坐标组</param>
+            <returns>大地坐标组</returns>
+        </member>
+        <member name="P:YTsUtility.GeodeticSurveying.CoordinateTrans.ep">
+            <summary>
+            椭球
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.DataHandle.ControlOList">
+            <summary>
+            控制点物方坐标
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.DataHandle.ControlIList">
+            <summary>
+            控制点像方坐标
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.DataHandle.MCOList">
+            <summary>
+            已匹配的控制点物方坐标
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.DataHandle.MCIList">
+            <summary>
+            已匹配的控制点像方坐标
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.DataHandle.PassOList">
+            <summary>
+            求解出的加密点物方坐标
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.DataHandle.PassIList">
+            <summary>
+            加密点像方坐标
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.DataHandle.cpointsCount">
+            <summary>
+            匹配到的控制点数
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.DataHandle.KnownOList">
+            <summary>
+            加密点物方坐标
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.DataHandle.hasKnown">
+            <summary>
+            加密点物方坐标是否已知
+            </summary>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle.#ctor(System.Collections.Generic.List{YTsUtility.PhotoGramMetry.ObjectData},System.Collections.Generic.List{System.Collections.Generic.List{YTsUtility.PhotoGramMetry.ImageData}},System.Collections.Generic.List{System.Collections.Generic.List{YTsUtility.PhotoGramMetry.ImageData}})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="coList">控制点物方坐标</param>
+            <param name="ciList">控制点物方坐标</param>
+            <param name="piList">加密点像方坐标</param>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle.#ctor(System.Collections.Generic.List{YTsUtility.PhotoGramMetry.ObjectData},System.Collections.Generic.List{System.Collections.Generic.List{YTsUtility.PhotoGramMetry.ImageData}},System.Collections.Generic.List{System.Collections.Generic.List{YTsUtility.PhotoGramMetry.ImageData}},System.Collections.Generic.List{YTsUtility.PhotoGramMetry.ObjectData})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="coList">控制点物方坐标</param>
+            <param name="ciList">控制点物方坐标</param>
+            <param name="piList">加密点像方坐标</param>
+            <param name="koList">加密点物方坐标</param>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle.#ctor(System.Boolean,System.String,System.String,System.String,System.Int32,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="konwnop">是否已知加密点物方坐标(用于评定精度)</param>
+            <param name="copath">控制点物方坐标文件</param>
+            <param name="cipath">控制点像方坐标文件</param>
+            <param name="pipath">加密点像方坐标文件</param>
+            <param name="overlap">像片重叠度</param>
+            <param name="popath">加密点物方坐标文件(默认为空)</param>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle.MatchCPoints">
+            <summary>
+            匹配控制点(按点名)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle.BackForcus(YTsUtility.PhotoGramMetry.InsideElement,System.Collections.Generic.List{YTsUtility.PhotoGramMetry.OutsideElement},YTsUtility.PhotoGramMetry.DistortionParams)">
+            <summary>
+            已知内方位元素、外方位元素、畸变参数初值的后方交会
+            </summary>
+            <param name="ie">内方位元素初值</param>
+            <param name="oeList">外方元素初值</param>
+            <param name="dp">畸变参数</param>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle.UpdateData(YTsUtility.Matrix)">
+            <summary>
+            更新外方元素的值
+            </summary>
+            <param name="X">改正数矩阵</param>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle.ForwardForcus">
+            <summary>
+            前方交会
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle.Get_dx(YTsUtility.PhotoGramMetry.ImageData)">
+            <summary>
+            获取delta_x
+            </summary>
+            <param name="id">像方坐标x，以相片中心为原点</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle.Get_dy(YTsUtility.PhotoGramMetry.ImageData)">
+            <summary>
+            获取delta_y
+            </summary>
+            <param name="id">像方坐标y，以相片中心为原点</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle.ForwardForcus(System.Collections.Generic.List{YTsUtility.PhotoGramMetry.ObjectData})">
+            <summary>
+            严密的前方交会
+            </summary>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle.GetFB(YTsUtility.PhotoGramMetry.OutsideElement,System.Collections.Generic.List{YTsUtility.PhotoGramMetry.ImageData},System.Collections.Generic.List{YTsUtility.PhotoGramMetry.ObjectData})">
+            <summary>
+            获取严密前方一张相片的系数矩阵
+            </summary>
+            <param name="oe"></param>
+            <param name="id"></param>
+            <param name="od"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle.GetFl(YTsUtility.PhotoGramMetry.OutsideElement,System.Collections.Generic.List{YTsUtility.PhotoGramMetry.ImageData},System.Collections.Generic.List{YTsUtility.PhotoGramMetry.ObjectData})">
+            <summary>
+            计算前方交会时的lxy
+            </summary>
+            <param name="oe">外方元素</param>
+            <param name="od">物方坐标</param>
+            <param name="id">像方坐标</param>
+            <returns>l矩阵</returns>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle.GetAccuracy(System.Double)">
+            <summary>
+            获得点位精度
+            </summary>
+            <param name="distance">摄影距离，单位与物方坐标相同</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle.IsTerminating(System.Double,YTsUtility.Matrix)">
+            <summary>
+            根据给定的阈值判断是否终止迭代
+            </summary>
+            <param name="accurate"></param>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YTsUtility.PhotoGramMetry.DataHandle4">
+            <summary>
+            用四元数表示外方元素的数据处理类
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.DataHandle4.ControlOList">
+            <summary>
+            控制点物方坐标
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.DataHandle4.ControlIList">
+            <summary>
+            控制点像方坐标
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.DataHandle4.MCOList">
+            <summary>
+            已匹配的控制点物方坐标
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.DataHandle4.MCIList">
+            <summary>
+            已匹配的控制点像方坐标
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.DataHandle4.PassOList">
+            <summary>
+            求解出的加密点物方坐标
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.DataHandle4.PassIList">
+            <summary>
+            加密点像方坐标
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.DataHandle4.cpointsCount">
+            <summary>
+            匹配到的控制点数
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.DataHandle4.KnownOList">
+            <summary>
+            加密点物方坐标
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.DataHandle4.hasKnown">
+            <summary>
+            加密点物方坐标是否已知
+            </summary>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle4.#ctor(System.Collections.Generic.List{YTsUtility.PhotoGramMetry.ObjectData},System.Collections.Generic.List{System.Collections.Generic.List{YTsUtility.PhotoGramMetry.ImageData}},System.Collections.Generic.List{System.Collections.Generic.List{YTsUtility.PhotoGramMetry.ImageData}})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="coList">控制点物方坐标</param>
+            <param name="ciList">控制点物方坐标</param>
+            <param name="piList">加密点像方坐标</param>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle4.#ctor(System.Collections.Generic.List{YTsUtility.PhotoGramMetry.ObjectData},System.Collections.Generic.List{System.Collections.Generic.List{YTsUtility.PhotoGramMetry.ImageData}},System.Collections.Generic.List{System.Collections.Generic.List{YTsUtility.PhotoGramMetry.ImageData}},System.Collections.Generic.List{YTsUtility.PhotoGramMetry.ObjectData})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="coList">控制点物方坐标</param>
+            <param name="ciList">控制点物方坐标</param>
+            <param name="piList">加密点像方坐标</param>
+            <param name="koList">加密点物方坐标</param>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle4.#ctor(System.Boolean,System.String,System.String,System.String,System.Int32,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="knownop">是否已知加密点物方坐标(用于评定精度)</param>
+            <param name="copath">控制点物方坐标文件</param>
+            <param name="cipath">控制点像方坐标文件</param>
+            <param name="pipath">加密点像方坐标文件</param>
+            <param name="overlap">像片重叠度</param>
+            <param name="popath">加密点物方坐标文件(默认为空)</param>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle4.MatchCPoints">
+            <summary>
+            匹配控制点(按点名)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle4.BackForcus(YTsUtility.PhotoGramMetry.InsideElement)">
+            <summary>
+            带内方位元素初值的后方交会(可求出内外方位元素、畸变差参数)
+            附有限制条件的间接平差
+            </summary>
+            <param name="ie">内方位元素初值</param>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle4.BackForcus(YTsUtility.PhotoGramMetry.InsideElement,YTsUtility.PhotoGramMetry.DistortionParams)">
+            <summary>
+            已知内方位元素、畸变参数的后方交会(可求出外方位元素)
+            附有限制条件的间接平差
+            </summary>
+            <param name="ie">内方位元素初值</param>
+            <param name="dp">畸变参数</param>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle4.UpdateData(YTsUtility.Matrix)">
+            <summary>
+            更新外方元素的值
+            </summary>
+            <param name="X">改正数矩阵</param>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle4.BackForcus0">
+            <summary>
+            带有初值的后方交会
+            </summary>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle4.UpdateData0(YTsUtility.Matrix)">
+            <summary>
+            更新外方元素和内方元素、畸变参数的值
+            </summary>
+            <param name="X">改正数矩阵</param>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle4.ForwardForcus">
+            <summary>
+            前方交会
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle4.Get_dx(YTsUtility.PhotoGramMetry.ImageData)">
+            <summary>
+            获取delta_x
+            </summary>
+            <param name="id">像方坐标x，以相片中心为原点</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle4.Get_dy(YTsUtility.PhotoGramMetry.ImageData)">
+            <summary>
+            获取delta_y
+            </summary>
+            <param name="id">像方坐标y，以相片中心为原点</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle4.ForwardForcus(System.Collections.Generic.List{YTsUtility.PhotoGramMetry.ObjectData})">
+            <summary>
+            严密的前方交会
+            </summary>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle4.GetFB(YTsUtility.PhotoGramMetry.OutElement4,System.Collections.Generic.List{YTsUtility.PhotoGramMetry.ImageData},System.Collections.Generic.List{YTsUtility.PhotoGramMetry.ObjectData})">
+            <summary>
+            获取严密前方一张相片的系数矩阵
+            </summary>
+            <param name="oe"></param>
+            <param name="id"></param>
+            <param name="od"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle4.GetFl(YTsUtility.PhotoGramMetry.OutElement4,System.Collections.Generic.List{YTsUtility.PhotoGramMetry.ImageData},System.Collections.Generic.List{YTsUtility.PhotoGramMetry.ObjectData})">
+            <summary>
+            计算前方交会时的lxy
+            </summary>
+            <param name="oe">外方元素</param>
+            <param name="od">物方坐标</param>
+            <param name="id">像方坐标</param>
+            <returns>l矩阵</returns>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle4.GetAccuracy(System.Double)">
+            <summary>
+            获得点位精度
+            </summary>
+            <param name="distance">摄影距离，单位与物方坐标相同</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle4.GetOutEList3">
+            <summary>
+            用欧拉角表示的外方位元素
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle4.GetDP">
+            <summary>
+            获取畸变参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle4.GetInElement">
+            <summary>
+            获取内方位元素
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.DataHandle4.IsTerminating(System.Double,YTsUtility.Matrix)">
+            <summary>
+            根据给定的阈值判断是否终止迭代
+            </summary>
+            <param name="accurate"></param>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YTsUtility.GeodeticSurveying.ElpElement">
+            <summary>
+            元素
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.ElpElement.a">
+            <summary>
+            椭球元素
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.ElpElement.b">
+            <summary>
+            椭球元素
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.ElpElement.c">
+            <summary>
+            椭球元素
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.ElpElement.e_2">
+            <summary>
+            椭球元素
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.ElpElement.e2_2">
+            <summary>
+            椭球元素
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.ElpElement.alph">
+            <summary>
+            椭球元素
+            </summary>
+        </member>
+        <member name="T:YTsUtility.GeodeticSurveying.Ellipsoid">
+            <summary>
+            椭球类
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.Ellipsoid.data">
+            <summary>
+            椭球元素
+            </summary>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Ellipsoid.#ctor(System.Double,System.Double)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="a">椭球元素a</param>
+            <param name="b">椭球元素b</param>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Ellipsoid.#ctor">
+            <summary>
+            无参构造函数，默认为克氏椭球
+            </summary>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Ellipsoid.Klinefelter_ellipsoid">
+            <summary>
+            克氏椭球元素
+            </summary>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Ellipsoid.International_ellipsoid1975">
+            <summary>
+            1975国际椭球元素
+            </summary>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Ellipsoid.WGS84_ellipsoid">
+            <summary>
+            WGS-84椭球元素
+            </summary>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Ellipsoid.CGCS2000_ellipsoid">
+            <summary>
+            中国大地坐标系
+            </summary>
+        </member>
+        <member name="T:YTsUtility.ErrorMessageBox">
+            <summary>
+            错误对话框
+            </summary>
+        </member>
+        <member name="M:YTsUtility.ErrorMessageBox.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            构造函数，添加为.net组件
+            </summary>
+            <param name="container"></param>
+        </member>
+        <member name="M:YTsUtility.ErrorMessageBox.Show">
+            <summary>
+            显示错误框
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ErrorMessageBox.Show(System.String)">
+            <summary>
+            显示错误对话框
+            </summary>
+            <param name="errormsg">错误信息</param>
+            <returns></returns>
+        </member>
+        <member name="P:YTsUtility.ErrorMessageBox.ErrorMessage">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="T:YTsUtility.Excel">
+            <summary>
+            Excel类
+            </summary>
+        </member>
+        <member name="M:YTsUtility.Excel.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:YTsUtility.Excel.Show``1(System.Collections.Generic.List{System.String},System.Collections.Generic.List{``0})">
+            <summary>
+            显示一个列表的数据
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="heads"></param>
+            <param name="values"></param>
+        </member>
+        <member name="M:YTsUtility.Excel.Save(System.String)">
+            <summary>
+            保存
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="T:YTsUtility.GeodeticSurveying.GaussProjection">
+            <summary>
+            高斯投影类
+            </summary>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.GaussProjection.#ctor(YTsUtility.GeodeticSurveying.Ellipse,System.Double,System.Double)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="elp">常用椭球类型</param>
+            <param name="a">椭球参数a(如果为自定义的椭球)</param>
+            <param name="b">椭球参数b(如果为自定义的椭球)</param>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.GaussProjection.GaussPositive(YTsUtility.GeodeticSurveying.Geo2Point,YTsUtility.Angle)">
+            <summary>
+            高斯投影正算
+            </summary>
+            <param name="point">经纬度坐标</param>
+            <param name="L0">中央经线经度</param>
+            <returns>高斯平面坐标</returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.GaussProjection.GaussInverse(YTsUtility._2D_Point,YTsUtility.Angle)">
+            <summary>
+            高斯投影反算
+            </summary>
+            <param name="point">高斯平面坐标</param>
+            <param name="L0">中央经线经度</param>
+            <returns>经纬度坐标</returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.GaussProjection.GaussBandConvert(YTsUtility._2D_Point,YTsUtility.Angle,YTsUtility.Angle)">
+            <summary>
+            高斯邻带换算
+            </summary>
+            <param name="point">高斯平面上的点</param>
+            <param name="L0">原中央经线经度</param>
+            <param name="L1">新带中央经线经度</param>
+            <returns>新带的高斯平面坐标</returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.GaussProjection.GaussBandConvert(System.Collections.Generic.List{YTsUtility._2D_Point},YTsUtility.Angle,YTsUtility.Angle)">
+            <summary>
+            同一投影带上的点集的高斯邻带换算
+            </summary>
+            <param name="points">高斯平面上的点集</param>
+            <param name="L0">原中央经线经度</param>
+            <param name="L1">新带中央经线经度</param>
+            <returns>新带的高斯平面坐标点集</returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.GaussProjection.GaussPositive(System.Collections.Generic.List{YTsUtility.GeodeticSurveying.Geo2Point},YTsUtility.Angle)">
+            <summary>
+            批量高斯投影正算
+            </summary>
+            <param name="points">经纬度坐标表</param>
+            <param name="L0">中央经线经度</param>
+            <returns>高斯平面坐标表</returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.GaussProjection.GaussInverse(System.Collections.Generic.List{YTsUtility._2D_Point},YTsUtility.Angle)">
+            <summary>
+            批量高斯投影反算
+            </summary>
+            <param name="points">高斯平面坐标表</param>
+            <param name="L0">中央经线经度</param>
+            <returns>经纬度坐标表</returns>
+        </member>
+        <member name="P:YTsUtility.GeodeticSurveying.GaussProjection.ep">
+            <summary>
+            椭球
+            </summary>
+        </member>
+        <member name="T:YTsUtility.GeodeticSurveying.GeodeticElement">
+            <summary>
+            大地元素类
+            </summary>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.GeodeticElement.#ctor">
+            <summary>
+            构造一个默认实例
+            </summary>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.GeodeticElement.#ctor(YTsUtility.Angle,YTsUtility.Angle,YTsUtility.Angle,System.Double)">
+            <summary>
+            通过起点经纬度、大地线长度和方位角构造
+            </summary>
+            <param name="B1">大地纬度</param>
+            <param name="L1">大地经度</param>
+            <param name="A12">正方位角</param>
+            <param name="S">大地线长度</param>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.GeodeticElement.#ctor(System.Boolean,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            通过起点经纬度、方位角和大地线长度构造
+            </summary>
+            <param name="bl_mode">角度表示形式，true代表ddffmm.mmm,false代表弧度</param>
+            <param name="B1">起点大地纬度(ddffmm.mmm或弧度)</param>
+            <param name="L1">起点大地经度(ddffmm.mmm或弧度)</param>
+            <param name="A12">正方位角(ddffmm.mmm或弧度)</param>
+            <param name="S">大地线长度</param>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.GeodeticElement.#ctor(YTsUtility.Angle,YTsUtility.Angle,YTsUtility.Angle,YTsUtility.Angle)">
+            <summary>
+            通过两点经纬度构造一个实例
+            </summary>
+            <param name="B1">起点纬度</param>
+            <param name="L1">起点经度</param>
+            <param name="B2">终点纬度</param>
+            <param name="L2">终点经度</param>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.GeodeticElement.#ctor(System.Double,System.Double,System.Double,System.Double,System.Boolean)">
+            <summary>
+            通过弧度表示的两点经纬度构造实例(通过mode确定参数形式)
+            </summary>
+            <param name="bl_mode">角度表示形式，true代表ddffmm.mmm,false代表弧度</param>
+            <param name="B1">起点大地纬度(ddffmm.mmm或弧度)</param>
+            <param name="L1">起点大地经度(ddffmm.mmm或弧度)</param>
+            <param name="B2">终点大地纬度(ddffmm.mmm或弧度)</param>
+            <param name="L2">终点大地经度(ddffmm.mmm或弧度)</param>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.GeodeticElement.SetAccurate(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            设置精度
+            </summary>
+            <param name="n1">角度保留到小数点后的位数</param>
+            <param name="n2">方位角保留到小数点后的位数</param>
+            <param name="n3">大地线长度保留到小数点后的位数</param>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.GeodeticElement.ToString">
+            <summary>
+            转换成B1,B2,L1,L2,A12,A21,S
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:YTsUtility.GeodeticSurveying.GeodeticElement.B1">
+            <summary>
+            起点大地纬度
+            </summary>
+        </member>
+        <member name="P:YTsUtility.GeodeticSurveying.GeodeticElement.L1">
+            <summary>
+            起点大地经度
+            </summary>
+        </member>
+        <member name="P:YTsUtility.GeodeticSurveying.GeodeticElement.B2">
+            <summary>
+            终点大地纬度
+            </summary>
+        </member>
+        <member name="P:YTsUtility.GeodeticSurveying.GeodeticElement.L2">
+            <summary>
+            终点大地经度
+            </summary>
+        </member>
+        <member name="P:YTsUtility.GeodeticSurveying.GeodeticElement.A12">
+            <summary>
+            正方位角
+            </summary>
+        </member>
+        <member name="P:YTsUtility.GeodeticSurveying.GeodeticElement.A21">
+            <summary>
+            反方位角
+            </summary>
+        </member>
+        <member name="P:YTsUtility.GeodeticSurveying.GeodeticElement.S">
+            <summary>
+            大地线长度
+            </summary>
+        </member>
+        <member name="P:YTsUtility.GeodeticSurveying.GeodeticElement.Br1">
+            <summary>
+            弧度表示的起点纬度(用于计算)
+            </summary>
+        </member>
+        <member name="P:YTsUtility.GeodeticSurveying.GeodeticElement.Lr1">
+            <summary>
+            弧度表示的起点经度(用于计算)
+            </summary>
+        </member>
+        <member name="P:YTsUtility.GeodeticSurveying.GeodeticElement.Br2">
+            <summary>
+            弧度表示的终点纬度(用于计算)
+            </summary>
+        </member>
+        <member name="P:YTsUtility.GeodeticSurveying.GeodeticElement.Lr2">
+            <summary>
+            弧度表示的终点点经度(用于计算)
+            </summary>
+        </member>
+        <member name="P:YTsUtility.GeodeticSurveying.GeodeticElement.Ar12">
+            <summary>
+            弧度表示的正方位角(用于计算)
+            </summary>
+        </member>
+        <member name="P:YTsUtility.GeodeticSurveying.GeodeticElement.Ar21">
+            <summary>
+            弧度表示的反方位角(用于计算)
+            </summary>
+        </member>
+        <member name="P:YTsUtility.GeodeticSurveying.GeodeticElement.Sr">
+            <summary>
+            大地线长度(用于计算)
+            </summary>
+        </member>
+        <member name="T:YTsUtility.GeodeticSurveying.Auxiliary">
+            <summary>
+            辅助量计算类
+            </summary>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Auxiliary.GetW(System.Double,System.Double)">
+            <summary>
+            计算辅助量W
+            </summary>
+            <param name="e_2">椭球元素e^2</param>
+            <param name="B">大地纬度(弧度)</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Auxiliary.GetV(System.Double,System.Double)">
+            <summary>
+            计算辅助量V
+            </summary>
+            <param name="e2_2">椭球元素e'^2</param>
+            <param name="B">大地纬度(弧度)</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Auxiliary.GetN(System.Double,System.Double,System.Double)">
+            <summary>
+            计算N
+            </summary>
+            <param name="a">椭球元素a</param>
+            <param name="e_2">椭球元素e^2</param>
+            <param name="B">大地纬度(弧度)</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Auxiliary.GetM(System.Double,System.Double,System.Double)">
+            <summary>
+            计算M
+            </summary>
+            <param name="a">椭球元素a</param>
+            <param name="e_2">椭球元素e^2</param>
+            <param name="B">大地纬度(弧度)</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Auxiliary.GetYita2(System.Double,System.Double)">
+            <summary>
+            计算η的平方
+            </summary>
+            <param name="e2_2">椭球元素e'^2</param>
+            <param name="B">大地纬度(弧度)</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Auxiliary.Get_t(System.Double)">
+            <summary>
+            计算t,即tan(B)
+            </summary>
+            <param name="B">大地纬度(弧度)</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Auxiliary.Get_X(System.Double,System.Double,System.Double)">
+            <summary>
+            求子午线弧长
+            </summary>
+            <param name="a">椭球元素a</param>
+            <param name="e_2">椭球元素e^2</param>
+            <param name="B">大地纬度(弧度)</param>
+            <returns>赤道起的子午线弧长</returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Auxiliary.Get_Bf(System.Double,System.Double,System.Double,System.Int32)">
+            <summary>
+            获取底点纬度
+            </summary>
+            <param name="a">椭球元素a</param>
+            <param name="e_2">椭球元素e^2</param>
+            <param name="x">高斯投影横坐标</param>
+            <param name="mode">0表示迭代解法，其他表示直接解法</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Auxiliary.Get_L(System.Double,System.Double)">
+            <summary>
+            通过x,y坐标获取经度
+            </summary>
+            <param name="X">大地X坐标</param>
+            <param name="Y">大地Y坐标</param>
+            <returns>弧度表示的经度</returns>
+        </member>
+        <member name="T:YTsUtility.GeodeticSurveying.GeodeticSolution">
+            <summary>
+            大地解算类
+            </summary>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.GeodeticSolution.#ctor(YTsUtility.GeodeticSurveying.Ellipse,System.Double,System.Double)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="elp">常用椭球类型</param>
+            <param name="a">椭球参数a(如果为自定义的椭球)</param>
+            <param name="b">椭球参数b(如果为自定义的椭球)</param>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.GeodeticSolution.GaussPositive(YTsUtility.GeodeticSurveying.GeodeticElement)">
+            <summary>
+            高斯平均引数法正算
+            </summary>
+            <param name="ge">已知条件</param>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.GeodeticSolution.BesselPositive(YTsUtility.GeodeticSurveying.GeodeticElement)">
+            <summary>
+            贝塞尔正算
+            </summary>
+            <param name="ge">已知元素</param>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.GeodeticSolution.GaussInverse(YTsUtility.GeodeticSurveying.GeodeticElement)">
+            <summary>
+            高斯引数法反算
+            </summary>
+            <param name="ge">已知元素</param>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.GeodeticSolution.BesselInverse(YTsUtility.GeodeticSurveying.GeodeticElement)">
+            <summary>
+            贝塞尔反算
+            </summary>
+            <param name="ge">已知大地元素</param>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.GeodeticSolution.BesselInverse1(YTsUtility.GeodeticSurveying.GeodeticElement)">
+            <summary>
+            贝塞尔反算1
+            </summary>
+            <param name="ge"></param>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.GeodeticSolution.GaussPositive(System.Collections.Generic.List{YTsUtility.GeodeticSurveying.GeodeticElement})">
+            <summary>
+            批量高斯正算
+            </summary>
+            <param name="ges">已知点表</param>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.GeodeticSolution.BesselPositive(System.Collections.Generic.List{YTsUtility.GeodeticSurveying.GeodeticElement})">
+            <summary>
+            批量贝塞尔正算
+            </summary>
+            <param name="ges">已知点表</param>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.GeodeticSolution.GaussInverse(System.Collections.Generic.List{YTsUtility.GeodeticSurveying.GeodeticElement})">
+            <summary>
+            批量高斯反算
+            </summary>
+            <param name="ges">已知点表</param>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.GeodeticSolution.BesselInverse(System.Collections.Generic.List{YTsUtility.GeodeticSurveying.GeodeticElement})">
+            <summary>
+            批量贝塞尔反算
+            </summary>
+            <param name="ges">已知点表</param>
+        </member>
+        <member name="P:YTsUtility.GeodeticSurveying.GeodeticSolution.ep">
+            <summary>
+            椭球
+            </summary>
+        </member>
+        <member name="T:YTsUtility.GIS.Nodes">
+            <summary>
+            节点组
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GIS.Nodes.names">
+            <summary>
+            节点名组
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GIS.Nodes.used">
+            <summary>
+            是否被用过的标记
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GIS.Nodes.adj_Matrix">
+            <summary>
+            邻接矩阵
+            </summary>
+        </member>
+        <member name="T:YTsUtility.GIS.Result">
+            <summary>
+            结果结构
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GIS.Result.sName">
+            <summary>
+            起点名
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GIS.Result.eName">
+            <summary>
+            终点名
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GIS.Result.dist">
+            <summary>
+            总值
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GIS.Result.way">
+            <summary>
+            路径
+            </summary>
+        </member>
+        <member name="M:YTsUtility.GIS.Result.ToString">
+            <summary>
+            转换为字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YTsUtility.GIS.Graph">
+            <summary>
+            最短路径图
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GIS.Graph.nodes">
+            <summary>
+            节点表
+            </summary>
+        </member>
+        <member name="M:YTsUtility.GIS.Graph.#ctor(System.String[],System.Double[0:,0:])">
+            <summary>
+            构造函数
+            </summary>
+            <param name="names">点名组</param>
+            <param name="matrix">邻接矩阵</param>
+        </member>
+        <member name="M:YTsUtility.GIS.Graph.Get_Way(System.String,System.String)">
+            <summary>
+            获取两点之间的最短路径
+            </summary>
+            <param name="SName">起点</param>
+            <param name="EName">终点</param>
+            <returns>结果</returns>
+        </member>
+        <member name="M:YTsUtility.GIS.Graph.Get_All">
+            <summary>
+            获取所有的最短路径
+            </summary>
+            <returns>最短路径结果表</returns>
+        </member>
+        <member name="M:YTsUtility.GIS.Graph.OutPut(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            将结果输出到文件，默认为追加
+            </summary>
+            <param name="filepath">文件路径</param>
+            <param name="append">是否追加</param>
+            <param name="SName">起点名</param>
+            <param name="EName">终点名</param>
+        </member>
+        <member name="M:YTsUtility.GIS.Graph.OutPutAll(System.String,System.Boolean)">
+            <summary>
+            将所有结果作为文件输出,默认为不追加
+            </summary>
+            <param name="filepath">文件名</param>
+            <param name="append">是否是追加</param>
+        </member>
+        <member name="M:YTsUtility.GIS.Graph.Save(System.String)">
+            <summary>
+            将所有结果二进制序列化存储
+            </summary>
+            <param name="filepath">文件路径</param>
+        </member>
+        <member name="M:YTsUtility.GIS.Graph.Read(System.String)">
+            <summary>
+            读取二进制文件，反序列化得到结果表
+            </summary>
+            <param name="filepath">文件路径</param>
+        </member>
+        <member name="P:YTsUtility.GIS.Graph.results">
+            <summary>
+            结果表
+            </summary>
+        </member>
+        <member name="P:YTsUtility.PhotoGramMetry.ImageMatch.bmpList">
+            <summary>
+            影像列表
+            </summary>
+        </member>
+        <member name="T:YTsUtility.ImageProcess.ImageProcessing">
+            <summary>
+            图像处理类(暂时只适用于24位深的图像)
+            </summary>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.#ctor(System.Drawing.Bitmap)">
+            <summary>
+            通过位图构造
+            </summary>
+            <param name="bmp"></param>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.#ctor(System.String)">
+            <summary>
+            通过文件名构造
+            </summary>
+            <param name="bmppath">文件路径</param>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.Scalize">
+            <summary>
+            灰度化
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.TwoValue(System.Int32)">
+            <summary>
+            根据阈值进行二值化
+            </summary>
+            <param name="T0">阈值</param>
+            <returns>二值化后的图像</returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.GetBestTresh">
+            <summary>
+            OSTU法获取最佳阈值
+            </summary>
+            <returns>最佳阈值</returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.RGBCount">
+            <summary>
+            像素各分量个数统计
+            </summary>
+            <returns>像素统计表(顺序为RGB)</returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.RGBCount(System.Drawing.Bitmap)">
+            <summary>
+            像素各分量个数统计的静态方法
+            </summary>
+            <param name="bmp">需要统计的图像</param>
+            <returns>像素统计表(顺序为RGB)</returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.Invert">
+            <summary>
+            反色处理
+            </summary>
+            <returns>反色处理后的图像</returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.MidFilter">
+            <summary>
+            3*3中值滤波(1028*800,2s)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.MidFilter(System.Double[0:,0:],System.Double)">
+            <summary>
+            加权中值滤波
+            </summary>
+            <param name="P">权3*3</param>
+            <param name="z">权分母</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.MidFilter1(System.Double)">
+            <summary>
+            加权中值滤波器1：加强中心，保留和加强水平垂直线
+            P:
+            0 1 0
+            1 4 1
+            0 1 0
+            </summary>
+            <param name="z">权分母，默认为16，影响图像亮度</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.MidFilter2(System.Double)">
+            <summary>
+            加权中值滤波器2：保留和加强水平垂直线
+            P:
+            0 1 0
+            1 0 1
+            0 1 0
+            </summary>
+            <param name="z">权分母，默认为16，影响图像亮度</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.MidFilter3(System.Double)">
+            <summary>
+            加权中值滤波器3：保留对角线
+            P:
+            1 0 1
+            0 4 0
+            1 0 1
+            </summary>
+            <param name="z">权分母，默认为16，影响图像亮度</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.MidFilter4(System.Double)">
+            <summary>
+            加权中值滤波器4：均衡效果
+            P:
+            1 1 1
+            1 4 1
+            1 1 1
+            </summary>
+            <param name="z">权分母，默认为16，影响图像亮度</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.TemplateConvolution3(System.Drawing.Bitmap,System.Double[0:,0:])">
+            <summary>
+            三阶模板卷积
+            </summary>
+            <param name="bmp">原图像</param>
+            <param name="template">模板</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.TemplateConvolution2(System.Drawing.Bitmap,System.Double[0:,0:])">
+            <summary>
+            二阶模板卷积
+            </summary>
+            <param name="bmp">原图像</param>
+            <param name="template">二阶模板</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.TemplateConvolution(System.Drawing.Bitmap,System.Double[0:,0:],System.Int32)">
+            <summary>
+            n阶模板卷积
+            </summary>
+            <param name="bmp">原图像</param>
+            <param name="template">n阶模板</param>
+            <param name="level">模板阶数</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.GaussFilter">
+            <summary>
+            高斯滤波(1028*800,2.5s)
+            </summary>
+            <returns>高斯滤波后的图像</returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.Normalize(System.Byte,System.Double)">
+            <summary>
+            图像规格化
+            </summary>
+            <param name="M0">期望平均灰度值</param>
+            <param name="Var_2">期望方差</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.GaborFilter(System.Double)">
+            <summary>
+            Gabor滤波（取8个方向的最大值）(1028*800,106s)
+            </summary>
+            <param name="f">频率,取0,1,2,3,默认为1</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.SingleGaborFilter(System.Double,System.Double)">
+            <summary>
+            gabor单向滤波
+            </summary>
+            <param name="direction">方向</param>
+            <param name="f">频率</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.ExpandBorder(System.Byte[],System.Int32,System.Int32,System.Int32)">
+            <summary>
+            扩展图像数组
+            </summary>
+            <param name="bsrc">原数组</param>
+            <param name="width">图像宽度</param>
+            <param name="stride">扫描行宽度</param>
+            <param name="dis">扩展像素个数</param>
+            <returns>扩展后数组(去除扫描行与图像宽度差异)</returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.FourAnisotropic(System.Int32,System.Double,System.Double)">
+            <summary>
+            图像四向各项异性扩散平滑(1028*800,4s)
+            </summary>
+            <param name="n">迭代次数</param>
+            <param name="k">扩散系数参数</param>
+            <param name="t">步长</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.EightAnisotropic(System.Int32,System.Double,System.Double)">
+            <summary>
+            图像八向各项异性扩散平滑(1028*800,8s)
+            </summary>
+            <param name="n">迭代次数</param>
+            <param name="k">扩散系数参数</param>
+            <param name="t">步长</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.Erode">
+            <summary>
+            二值图像腐蚀(四个方向)(白色背景)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.Dilate">
+            <summary>
+            二值图像膨胀(四个方向)(白色背景)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.GrayErode">
+            <summary>
+            灰度图像腐蚀(5*5)(白色背景)(1028*800,1.5s)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.GrayDilate">
+            <summary>
+            灰度图像膨胀(5*5)(白色背景)(1028*800,1.5s)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.Sobel">
+            <summary>
+            Sobel边缘检测(1028*800,3s)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.HSobel">
+            <summary>
+            水平Sobel增强(1028*800,3s)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.VSobel">
+            <summary>
+            垂直Sobel增强(1028*800,3s)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.Prewitt">
+            <summary>
+            Prewitt边缘检测(1028*800,3s)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.Robert">
+            <summary>
+            Robert边缘检测(1028*800,3s)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.Kirsch">
+            <summary>
+            Kirsch边缘检测(1028*800,10s)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.LaplaceFilter1">
+            <summary>
+            Laplace滤波器1(1028*800,3s)
+            0  -1  0
+            -1  4 -1
+            0  -1  0
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.LaplaceFilter2">
+            <summary>
+            Laplace滤波器2(1028*800,3s)
+            -1  -1 -1
+            -1   8 -1
+            -1  -1 -1
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.GaussLaplace1">
+            <summary>
+            Gauss-Laplace滤波器1
+             0  0 -1  0  0
+             0 -1 -2 -1  0
+            -1 -2 16 -2 -1
+             0 -1 -2 -1  0
+             0  0 -1  0  0
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.GaussLaplace2">
+            <summary>
+            Gauss-Laplace滤波器1
+            -2 -4 -4 -4 -2
+            -4  0  8  0 -4
+            -4  8 16  8 -4
+            -4  0  8  0 -4
+            -2 -4 -4 -4 -2
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.Marr">
+            <summary>
+            Marr边缘检测
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.LineTranse">
+            <summary>
+            线性变换
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.ImageProcessing.Clone">
+            <summary>
+            提供原图像的副本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:YTsUtility.ImageProcess.ImageProcessing.bitmap">
+            <summary>
+            图像源
+            </summary>
+        </member>
+        <member name="T:YTsUtility.GeodeticSurveying.Station">
+            <summary>
+            测站结构
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.Station.backName">
+            <summary>
+            后视点名
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.Station.frontName">
+            <summary>
+            前视点名
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.Station.backdistance">
+            <summary>
+            后视距
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.Station.frontdistance">
+            <summary>
+            前视距
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.Station.slight">
+            <summary>
+            视距差
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.Station.sumslight">
+            <summary>
+            累积视距差
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.Station.back1">
+            <summary>
+            后尺读数1
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.Station.back2">
+            <summary>
+            后尺读数2
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.Station.front1">
+            <summary>
+            前尺读数1
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.Station.front2">
+            <summary>
+            前尺读数2
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.Station.hight">
+            <summary>
+            高差
+            </summary>
+        </member>
+        <member name="T:YTsUtility.GeodeticSurveying.LevelPoint">
+            <summary>
+            水准点
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.LevelPoint.name">
+            <summary>
+            点名
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.LevelPoint.known">
+            <summary>
+            是否已知高程或初值
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.LevelPoint.hight">
+            <summary>
+            高程(默认为0)
+            </summary>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.LevelPoint.ToString">
+            <summary>
+            点名:高程
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.LevelPoint.ToString(System.Int32)">
+            <summary>
+            点名:特定小数点位数的高程
+            </summary>
+            <param name="n">高程的小数位数</param>
+            <returns></returns>
+        </member>
+        <member name="T:YTsUtility.GeodeticSurveying.Section">
+            <summary>
+            测段结构
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.Section.name">
+            <summary>
+            测段名
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.Section.hight">
+            <summary>
+            测段高差
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.Section.distance">
+            <summary>
+            测段距离
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.Section.stationCount">
+            <summary>
+            测站数
+            </summary>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Section.ToString">
+            <summary>
+            测段:高差,长度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Section.ToString(System.Int32,System.Int32)">
+            <summary>
+            测段:特定小数位数的高差，长度
+            </summary>
+            <param name="n1">高差小数位数</param>
+            <param name="n2">长度小数位数</param>
+            <returns></returns>
+        </member>
+        <member name="T:YTsUtility.GeodeticSurveying.LevelingMeasure2">
+            <summary>
+            二等水准测量
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.LevelingMeasure2.sectionList">
+            <summary>
+            测段表
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.LevelingMeasure2.count">
+            <summary>
+            测站数
+            </summary>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.LevelingMeasure2.#ctor(System.Collections.Generic.List{YTsUtility.GeodeticSurveying.Station})">
+            <summary>
+            通过测站列表构造
+            </summary>
+            <param name="stations"></param>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.LevelingMeasure2.#ctor(System.String,System.Int32)">
+            <summary>
+            通过文件路径构造(暂时只支持天宝Dini3)
+            </summary>
+            <param name="filepath"></param>
+            <param name="mode"></param>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.LevelingMeasure2.GetH(System.String,System.String,System.Double@,System.Double)">
+            <summary>
+            计算高差(程)
+            </summary>
+            <param name="startpoint">起始站名</param>
+            <param name="endpoint">终点站名</param>
+            <param name="initialH">起点高程,默认为0,需要计算终点高程时对其赋值</param>
+            <param name="distance">测段距离变量</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.LevelingMeasure2.GetAllSection(System.Collections.Generic.List{System.String})">
+            <summary>
+            获取所有测段信息
+            </summary>
+            <param name="sectionName">测段列表,测段格式为s-e,s表示起点站名，e表示终点站名</param>
+        </member>
+        <member name="T:YTsUtility.GeodeticSurveying.ObservingManua">
+            <summary>
+            观测数据类
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.ObservingManua.stationList">
+            <summary>
+            测站列表
+            </summary>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.ObservingManua.#ctor(System.String,System.Int32)">
+            <summary>
+            通过文件实例化
+            </summary>
+            <param name="filepath">数据文件路径</param>
+            <param name="mode">0表示天宝Dini03数据,1表示**数据</param>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.ObservingManua.GetExcel">
+            <summary>
+            获取观测手簿的excel表格
+            </summary>
+        </member>
+        <member name="T:YTsUtility.GeodeticSurveying.LevelingAdjust">
+            <summary>
+            水准平差类
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.LevelingAdjust.sectionList">
+            <summary>
+            测段表
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.LevelingAdjust.pointList">
+            <summary>
+            水准点表
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.LevelingAdjust.Hx">
+            <summary>
+            未知数的改正数
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.LevelingAdjust.HB">
+            <summary>
+            B矩阵
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.LevelingAdjust.Hl">
+            <summary>
+            l矩阵
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.LevelingAdjust.HP">
+            <summary>
+            权阵P
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.LevelingAdjust.HH">
+            <summary>
+            改正后的高程值
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.LevelingAdjust.H0">
+            <summary>
+            未知数的初值
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.LevelingAdjust.HQ">
+            <summary>
+            未知数的协因数阵
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.LevelingAdjust.HD">
+            <summary>
+            未知数的协方差阵
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.LevelingAdjust.xnames">
+            <summary>
+            未知水准点名
+            </summary>
+        </member>
+        <member name="F:YTsUtility.GeodeticSurveying.LevelingAdjust.xigema">
+            <summary>
+            每公里单位权中误差
+            </summary>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.LevelingAdjust.#ctor(System.Collections.Generic.List{YTsUtility.GeodeticSurveying.Section},System.Collections.Generic.List{YTsUtility.GeodeticSurveying.LevelPoint})">
+            <summary>
+            构造
+            </summary>
+            <param name="secl">测段表</param>
+            <param name="pl">水准点表</param>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.LevelingAdjust.#ctor">
+            <summary>
+            序列化要求
+            </summary>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.LevelingAdjust.GetInitValue(System.Collections.Generic.List{System.String})">
+            <summary>
+            获取各个点的初值
+            </summary>
+            <param name="knownPoint"></param>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.LevelingAdjust.Adjust">
+            <summary>
+            水准网平差
+            </summary>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.LevelingAdjust.GetJ(System.String)">
+            <summary>
+            通过点名获取未知数所在列数
+            </summary>
+            <param name="pname"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.LevelingAdjust.GetIndex(System.String)">
+            <summary>
+            获取点在list中的索引
+            </summary>
+            <param name="pname"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YTsUtility.Matrix">
+            <summary>
+            矩阵类
+            </summary>
+        </member>
+        <member name="M:YTsUtility.Matrix.#ctor">
+            <summary>
+            构造一个实例
+            </summary>
+        </member>
+        <member name="M:YTsUtility.Matrix.#ctor(System.Int32,System.Int32)">
+            <summary>
+            构造一个实例
+            </summary>
+        </member>
+        <member name="M:YTsUtility.Matrix.#ctor(System.Double[][],System.Int32,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="m_matrix"></param>
+            <param name="row"></param>
+            <param name="col"></param>
+        </member>
+        <member name="M:YTsUtility.Matrix.#ctor(System.Double[0:,0:],System.Int32,System.Int32)">
+            <summary>
+            构造一个实例
+            </summary>
+            <param name="m_matrix"></param>
+            <param name="row"></param>
+            <param name="col"></param>
+        </member>
+        <member name="M:YTsUtility.Matrix.#ctor(System.Int32,System.Int32,System.Double[])">
+            <summary>
+            构造一个实例
+            </summary>
+            <param name="row"></param>
+            <param name="col"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:YTsUtility.Matrix.SubMatrix(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            获得子矩阵
+            </summary>
+            <param name="rstart">行起点(从零开始计)</param>
+            <param name="rend">行终点(从零开始计)</param>
+            <param name="cstart">列起点(从零开始计)</param>
+            <param name="cend">列终点(从零开始计)</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Matrix.SubRMatrix(System.Int32,System.Int32)">
+            <summary>
+            获得子矩阵
+            </summary>
+            <param name="rstart">行起点(从零开始计)</param>
+            <param name="rend">行终点(从零开始计)</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Matrix.SubCMatrix(System.Int32,System.Int32)">
+            <summary>
+            获得子矩阵
+            </summary>
+            <param name="cstart">列起点(从零开始计)</param>
+            <param name="cend">列终点(从零开始计)</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Matrix.Abandon_Column(System.Int32)">
+            <summary>
+            去掉矩阵中的某列
+            </summary>
+            <param name="nth"></param>
+        </member>
+        <member name="M:YTsUtility.Matrix.GetMax(System.Int32)">
+            <summary>
+            获取从某行起的行主元索引
+            </summary>
+            <param name="start"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Matrix.SwapRow(System.Int32,System.Int32)">
+            <summary>
+            交换两行
+            </summary>
+            <param name="first"></param>
+            <param name="second"></param>
+        </member>
+        <member name="M:YTsUtility.Matrix.Multiply(System.Int32,System.Double)">
+            <summary>
+            一行同时乘一个数
+            </summary>
+            <param name="row"></param>
+            <param name="f"></param>
+        </member>
+        <member name="M:YTsUtility.Matrix.Elimination(System.Int32,System.Int32,System.Double)">
+            <summary>
+            消元A[row]-f*A[main]
+            </summary>
+            <param name="row"></param>
+            <param name="main"></param>
+            <param name="f"></param>
+        </member>
+        <member name="M:YTsUtility.Matrix.Det">
+            <summary>
+            方阵的行列式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Matrix.Inverse(System.Boolean)">
+            <summary>
+            高斯消去法求逆阵
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Matrix.T">
+            <summary>
+            转置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Matrix.SetAccurate(System.Int32)">
+            <summary>
+            设置精度
+            </summary>
+            <param name="n"></param>
+        </member>
+        <member name="M:YTsUtility.Matrix.op_Addition(YTsUtility.Matrix,YTsUtility.Matrix)">
+            <summary>
+            矩阵相加
+            </summary>
+            <param name="m1"></param>
+            <param name="m2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Matrix.op_Subtraction(YTsUtility.Matrix,YTsUtility.Matrix)">
+            <summary>
+            矩阵相减
+            </summary>
+            <param name="m1"></param>
+            <param name="m2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Matrix.op_UnaryNegation(YTsUtility.Matrix)">
+            <summary>
+            矩阵取反
+            </summary>
+            <param name="m"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Matrix.op_Multiply(YTsUtility.Matrix,System.Double)">
+            <summary>
+            数乘
+            </summary>
+            <param name="m"></param>
+            <param name="f"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Matrix.op_Multiply(System.Double,YTsUtility.Matrix)">
+            <summary>
+            数乘
+            </summary>
+            <param name="f">乘数</param>
+            <param name="m">矩阵</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Matrix.op_Multiply(YTsUtility.Matrix,YTsUtility.Matrix)">
+            <summary>
+            矩阵相乘
+            </summary>
+            <param name="m1"></param>
+            <param name="m2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Matrix.op_Division(YTsUtility.Matrix,System.Double)">
+            <summary>
+            矩阵除以一个数
+            </summary>
+            <param name="m"></param>
+            <param name="f"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Matrix.ToString">
+            <summary>
+            转换成字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Matrix.ToFormatString(System.Int32)">
+            <summary>
+            转换成特定小数位数的字符串
+            </summary>
+            <param name="n">小数位数</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Matrix.Clone">
+            <summary>
+            对外提供一个精确副本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Matrix.OutPut(System.String)">
+            <summary>
+            将矩阵输出为csv文件
+            </summary>
+            <param name="filename"></param>
+        </member>
+        <member name="M:YTsUtility.Matrix.Eye(System.Int32)">
+            <summary>
+            构造一个单位矩阵
+            </summary>
+            <param name="level">矩阵阶数</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Matrix.Zeros(System.Int32,System.Int32)">
+            <summary>
+            生成指定行列的零矩阵
+            </summary>
+            <param name="width"></param>
+            <param name="hight"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Matrix.Num(System.Double,System.Int32,System.Int32)">
+            <summary>
+            构造一个全为num的矩阵
+            </summary>
+            <param name="num"></param>
+            <param name="width"></param>
+            <param name="hight"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Matrix.RowCombine(YTsUtility.Matrix,YTsUtility.Matrix)">
+            <summary>
+            将两个矩阵按行合并(须保证列数相等)
+            </summary>
+            <param name="m1">第一个矩阵</param>
+            <param name="m2">第二个矩阵</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Matrix.ColumnCombine(YTsUtility.Matrix,YTsUtility.Matrix)">
+            <summary>
+            将两个矩阵按列合并(须保证行数相等)
+            </summary>
+            <param name="m1">第一个矩阵</param>
+            <param name="m2">第二个矩阵</param>
+            <returns></returns>
+        </member>
+        <member name="P:YTsUtility.Matrix.Row">
+            <summary>
+            矩阵行数
+            </summary>
+        </member>
+        <member name="P:YTsUtility.Matrix.Column">
+            <summary>
+            矩阵列数
+            </summary>
+        </member>
+        <member name="P:YTsUtility.Matrix.M_matrix">
+            <summary>
+            矩阵数组，只读
+            </summary>
+        </member>
+        <member name="P:YTsUtility.Matrix.Item(System.Int32,System.Int32)">
+            <summary>
+            索引器(返回确定坐标的值)
+            </summary>
+            <param name="row">行</param>
+            <param name="col">列</param>
+            <returns></returns>
+        </member>
+        <member name="T:YTsUtility.Methods">
+            <summary>
+            静态工具类
+            </summary>
+        </member>
+        <member name="F:YTsUtility.Methods.ρ">
+            <summary>
+            1弧度对应的秒
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:YTsUtility.Methods.PI">
+            <summary>
+            pi
+            </summary>
+        </member>
+        <member name="F:YTsUtility.Methods.E">
+            <summary>
+            e
+            </summary>
+        </member>
+        <member name="M:YTsUtility.Methods.Average(System.Double,System.Double)">
+             <summary>
+            求平均值 
+             </summary>
+             <param name="x"></param>
+             <param name="y"></param>
+             <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Methods.Set_Accurate(System.Double,System.Int32)">
+            <summary>
+            精确到小数点后几位
+            </summary>
+            <param name="f"></param>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Methods.Integer(System.Double)">
+            <summary>
+            向下取整
+            </summary>
+            <param name="f"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Methods.CovertToDirect(System.String)">
+            <summary>
+            将字符标记转换为角方向
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Methods.SetAccurate(System.Double,System.Int32)">
+            <summary>
+            设置精度
+            </summary>
+            <param name="x"></param>
+            <param name="n">保留到小数点后n位</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Methods.ToFormatString(System.Double,System.Int32)">
+            <summary>
+            转换为保留特定小数位的字符串
+            </summary>
+            <param name="x"></param>
+            <param name="n">保留到小数点后n位</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Methods.Endl(System.String)">
+            <summary>
+            在字符串后面加换行
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Methods.DataTime(System.String)">
+            <summary>
+            在字符串后面加上时间
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Methods.Serialize``1(``0,System.String)">
+            <summary>
+            二进制序列化泛型方法
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="t"></param>
+            <param name="filepath">文件路径</param>
+        </member>
+        <member name="M:YTsUtility.Methods.Deserialize``1(System.String)">
+            <summary>
+            反二进制序列化得到对象
+            </summary>
+            <typeparam name="T">类型名</typeparam>
+            <param name="filepath">文件路径</param>
+        </member>
+        <member name="M:YTsUtility.Methods.SerializeXml``1(``0,System.String)">
+            <summary>
+            Xml序列化泛型方法
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="t"></param>
+            <param name="filepath">文件路径</param>
+        </member>
+        <member name="M:YTsUtility.Methods.DeserializeXml``1(System.String)">
+            <summary>
+            反Xml序列化得到对象
+            </summary>
+            <typeparam name="T">类型名</typeparam>
+            <param name="filepath">文件路径</param>
+        </member>
+        <member name="M:YTsUtility.Methods.CreateSubs(System.IO.DirectoryInfo,System.Collections.Generic.List{System.String})">
+            <summary>
+            创建多个子文件夹
+            </summary>
+            <param name="di"></param>
+            <param name="paths"></param>
+        </member>
+        <member name="M:YTsUtility.Methods.Execute(System.String,System.Int32)">
+            <summary>
+            执行dos命令(当前路径为可执行文件所在路径)
+            </summary>
+            <param name="command">命令字符串</param>
+            <param name="second">等待毫秒</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Methods.Execute(System.String)">
+            <summary>
+            执行dos命令
+            </summary>
+            <param name="command">命令字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Methods.Sum2D(System.Double[0:,0:])">
+            <summary>
+            求二维数组的和
+            </summary>
+            <param name="array"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YTsUtility.Methods.Direction">
+            <summary>
+            确定观测角的方向
+            </summary>
+        </member>
+        <member name="F:YTsUtility.Methods.Direction.left">
+            <summary>
+            左角
+            </summary>
+        </member>
+        <member name="F:YTsUtility.Methods.Direction.right">
+            <summary>
+            右角
+            </summary>
+        </member>
+        <member name="T:YTsUtility.DMath">
+            <summary>
+            用于简化Math中函数的委托
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YTsUtility.PhotoGramMetry.ObjectData">
+            <summary>
+            物方坐标类
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.ObjectData.Name">
+            <summary>
+            点名
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.ObjectData.pos">
+            <summary>
+            坐标
+            </summary>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.ObjectData.#ctor(System.String,YTsUtility._3D_Point)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">点名</param>
+            <param name="point">坐标</param>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.ObjectData.#ctor">
+            <summary>
+            默认构造函数(点名为空字符，坐标为原点)
+            </summary>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.ObjectData.ToString">
+            <summary>
+            形如 name,pos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.ObjectData.OutPut(System.Collections.Generic.List{YTsUtility.PhotoGramMetry.ObjectData},System.String)">
+            <summary>
+            输出坐标表
+            </summary>
+            <param name="odList"></param>
+            <param name="filepath"></param>
+        </member>
+        <member name="T:YTsUtility.PhotoGramMetry.ImageData">
+            <summary>
+            像方坐标类
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.ImageData.Name">
+            <summary>
+            点名
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.ImageData.pos">
+            <summary>
+            像方坐标
+            </summary>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.ImageData.ToString">
+            <summary>
+            形如 name,pos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YTsUtility.PhotoGramMetry.OutsideElement">
+            <summary>
+            外方位元素
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.OutsideElement.Spos">
+            <summary>
+            摄影中心坐标(线元素)
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.OutsideElement.phi">
+            <summary>
+            角元素
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.OutsideElement.omega">
+            <summary>
+            角元素
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.OutsideElement.kappa">
+            <summary>
+            角元素
+            </summary>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.OutsideElement.ToOutElem4">
+            <summary>
+            转换为四元素形式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YTsUtility.PhotoGramMetry.OutElement4">
+            <summary>
+            四元数表示的外方位元素
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.OutElement4.Spos">
+            <summary>
+            线元素
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.OutElement4.q0">
+            <summary>
+            实部
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.OutElement4.q1">
+            <summary>
+            虚部1
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.OutElement4.q2">
+            <summary>
+            虚部2
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.OutElement4.q3">
+            <summary>
+            虚部3
+            </summary>
+        </member>
+        <member name="M:YTsUtility.PhotoGramMetry.OutElement4.ToOutElem3">
+            <summary>
+            转换为角元素表示形式的外方元素
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YTsUtility.PhotoGramMetry.InsideElement">
+            <summary>
+            内方位元素
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.InsideElement.p0">
+            <summary>
+            主点坐标
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.InsideElement.f">
+            <summary>
+            主距
+            </summary>
+        </member>
+        <member name="T:YTsUtility.PhotoGramMetry.DistortionParams">
+            <summary>
+            畸变参数
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.DistortionParams.k1">
+            <summary>
+            畸变参数
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.DistortionParams.k2">
+            <summary>
+            畸变参数
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.DistortionParams.p1">
+            <summary>
+            畸变参数
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.DistortionParams.p2">
+            <summary>
+            畸变参数
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.DistortionParams.alph">
+            <summary>
+            畸变参数
+            </summary>
+        </member>
+        <member name="F:YTsUtility.PhotoGramMetry.DistortionParams.beta">
+            <summary>
+            畸变参数
+            </summary>
+        </member>
+        <member name="T:YTsUtility._2D_Point">
+            <summary>
+            二维坐标类
+            </summary>
+        </member>
+        <member name="F:YTsUtility._2D_Point.Origin">
+            <summary>
+            原点
+            </summary>
+        </member>
+        <member name="M:YTsUtility._2D_Point.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YTsUtility._2D_Point.#ctor(System.Double,System.Double)">
+            <summary>
+            构造一个实例
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+        </member>
+        <member name="M:YTsUtility._2D_Point.op_Addition(YTsUtility._2D_Point,YTsUtility._2D_Point)">
+            <summary>
+            对应相加
+            </summary>
+            <param name="p1"></param>
+            <param name="p2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._2D_Point.op_Subtraction(YTsUtility._2D_Point,YTsUtility._2D_Point)">
+            <summary>
+            对应相减
+            </summary>
+            <param name="p1"></param>
+            <param name="p2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._2D_Point.op_UnaryNegation(YTsUtility._2D_Point)">
+            <summary>
+            均取相反数
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._2D_Point.op_Multiply(YTsUtility._2D_Point,YTsUtility._2D_Point)">
+            <summary>
+            以原为起点的两向量数量积
+            </summary>
+            <param name="p1"></param>
+            <param name="p2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._2D_Point.op_Multiply(YTsUtility._2D_Point,System.Double)">
+            <summary>
+            数乘
+            </summary>
+            <param name="p"></param>
+            <param name="f"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._2D_Point.op_GreaterThanOrEqual(YTsUtility._2D_Point,System.Double)">
+            <summary>
+            判断是否均大于某一数的值
+            </summary>
+            <param name="p"></param>
+            <param name="f"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._2D_Point.op_LessThanOrEqual(YTsUtility._2D_Point,System.Double)">
+            <summary>
+            判断是否均小于某一数的值
+            </summary>
+            <param name="p"></param>
+            <param name="f"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._2D_Point.Get_Norm(YTsUtility._2D_Point,YTsUtility._2D_Point)">
+            <summary>
+            两点间距离或向量模
+            </summary>
+            <param name="p1"></param>
+            <param name="p2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._2D_Point.Get_Norm">
+            <summary>
+            获取该点到原点的距离
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._2D_Point.Get_PAngle(YTsUtility._2D_Point,YTsUtility._2D_Point)">
+            <summary>
+            计算一条边的方位角
+            </summary>
+            <param name="pre"></param>
+            <param name="pos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._2D_Point.Abs">
+            <summary>
+            返回绝对值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._2D_Point.Set_Accurate(System.Int32)">
+            <summary>
+            设置精度
+            </summary>
+            <param name="n"></param>
+        </member>
+        <member name="M:YTsUtility._2D_Point.ChangeToInt">
+            <summary>
+            转换成整数，四舍五入
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._2D_Point.ToString">
+            <summary>
+            重载ToString,转换为每个元素的字符串相加
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._2D_Point.ToFormatString(System.Int32)">
+            <summary>
+            转换为字符串，保留到小数点后n位
+            </summary>
+            <param name="n">保留到小数点后n位</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._2D_Point.Output(System.String,YTsUtility._2D_Point[])">
+            <summary>
+            输出点数组
+            </summary>
+            <param name="filename"></param>
+            <param name="p"></param>
+        </member>
+        <member name="M:YTsUtility._2D_Point.Clone">
+            <summary>
+            对外提供一个复制能力
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._2D_Point.ToColumnMatrix">
+            <summary>
+            转换为列矩阵
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._2D_Point.ToColumnMatrix(System.Collections.Generic.List{YTsUtility._2D_Point})">
+            <summary>
+            转换成XY排列的列矩阵
+            </summary>
+            <param name="points"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._2D_Point.ReadPoint(System.String)">
+            <summary>
+            从文件读取二维坐标,每行一个坐标，同逗号或者空格隔开
+            </summary>
+            <param name="filepath">文件路径</param>
+            <returns>坐标表</returns>
+        </member>
+        <member name="P:YTsUtility._2D_Point.X">
+            <summary>
+            X坐标
+            </summary>
+        </member>
+        <member name="P:YTsUtility._2D_Point.Y">
+            <summary>
+            Y坐标
+            </summary>
+        </member>
+        <member name="T:YTsUtility._3D_Point">
+            <summary>
+            三维坐标
+            </summary>
+        </member>
+        <member name="M:YTsUtility._3D_Point.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YTsUtility._3D_Point.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            构造一个实例
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+        </member>
+        <member name="M:YTsUtility._3D_Point.op_Addition(YTsUtility._3D_Point,YTsUtility._3D_Point)">
+            <summary>
+            对应相加
+            </summary>
+            <param name="p1"></param>
+            <param name="p2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._3D_Point.op_Subtraction(YTsUtility._3D_Point,YTsUtility._3D_Point)">
+            <summary>
+            对应相减
+            </summary>
+            <param name="p1"></param>
+            <param name="p2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._3D_Point.op_UnaryNegation(YTsUtility._3D_Point)">
+            <summary>
+            均取相反数
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._3D_Point.op_Multiply(YTsUtility._3D_Point,YTsUtility._3D_Point)">
+            <summary>
+            以原为起点的两向量数量积
+            </summary>
+            <param name="p1"></param>
+            <param name="p2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._3D_Point.op_Multiply(YTsUtility._3D_Point,System.Double)">
+            <summary>
+            数乘
+            </summary>
+            <param name="p"></param>
+            <param name="f"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._3D_Point.op_Multiply(System.Double,YTsUtility._3D_Point)">
+            <summary>
+            数乘
+            </summary>
+            <param name="p"></param>
+            <param name="f"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._3D_Point.op_Division(YTsUtility._3D_Point,System.Double)">
+            <summary>
+            坐标分量除以同一个数
+            </summary>
+            <param name="p"></param>
+            <param name="f"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._3D_Point.op_GreaterThanOrEqual(YTsUtility._3D_Point,System.Double)">
+            <summary>
+            判断是否有大于某一数的值
+            </summary>
+            <param name="p"></param>
+            <param name="f"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._3D_Point.op_LessThanOrEqual(YTsUtility._3D_Point,System.Double)">
+            <summary>
+            判断是否有小于某一数的值
+            </summary>
+            <param name="p"></param>
+            <param name="f"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._3D_Point.Get_Norm(YTsUtility._3D_Point,YTsUtility._3D_Point)">
+            <summary>
+            两点间距离或向量模
+            </summary>
+            <param name="p1"></param>
+            <param name="p2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._3D_Point.Abs">
+            <summary>
+            返回绝对值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._3D_Point.Set_Accurate(System.Int32)">
+            <summary>
+            设置精度
+            </summary>
+            <param name="n"></param>
+        </member>
+        <member name="M:YTsUtility._3D_Point.ChangeToInt">
+            <summary>
+            取整，四舍五入
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._3D_Point.ToString">
+            <summary>
+            重载ToString,转换为每个元素的字符串相加
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._3D_Point.ToFormatString(System.Int32)">
+            <summary>
+            转换为字符串，保留到小数点后n位
+            </summary>
+            <param name="n">保留到小数点后n位</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._3D_Point.Clone">
+            <summary>
+            对外提供一个复制能力
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._3D_Point.ToColumnMatrix">
+            <summary>
+            转换为列矩阵
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._3D_Point.ToColumnMatrix(System.Collections.Generic.List{YTsUtility._3D_Point})">
+            <summary>
+            转换成XYZ排列的列矩阵
+            </summary>
+            <param name="points"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility._3D_Point.OutPut(System.Collections.Generic.List{YTsUtility._3D_Point},System.String)">
+            <summary>
+            输出三维坐标
+            </summary>
+            <param name="points">点List</param>
+            <param name="path">保存路径</param>
+        </member>
+        <member name="P:YTsUtility._3D_Point.X">
+            <summary>
+            X坐标
+            </summary>
+        </member>
+        <member name="P:YTsUtility._3D_Point.Y">
+            <summary>
+            Y坐标
+            </summary>
+        </member>
+        <member name="P:YTsUtility._3D_Point.Z">
+            <summary>
+            Z坐标
+            </summary>
+        </member>
+        <member name="T:YTsUtility.GeodeticSurveying.Geodetic_Point">
+            <summary>
+            大地坐标类
+            </summary>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Geodetic_Point.#ctor">
+            <summary>
+            构造一个默认实例
+            </summary>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Geodetic_Point.#ctor(YTsUtility.Angle,YTsUtility.Angle,System.Double)">
+            <summary>
+            通过经纬度和大地高构造
+            </summary>
+            <param name="B">大地纬度</param>
+            <param name="L">大地经度</param>
+            <param name="H">大地高</param>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Geodetic_Point.#ctor(System.Boolean,System.Double,System.Double,System.Double)">
+            <summary>
+            通过经纬度(ddffmm.mmm或弧度)和大地高构造
+            </summary>
+            <param name="B">大地纬度(ddffmm.mmm或弧度)</param>
+            <param name="L">大地经度(ddffmm.mmm或弧度)</param>
+            <param name="H">大地高</param>
+            <param name="bl_mode">true代表经纬度为ddffmm.mmm形式，false表示经纬度为弧度</param>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Geodetic_Point.To3D">
+            <summary>
+            转换为三维坐标，经纬度用弧度表示
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Geodetic_Point.SetAccurate(System.Int32,System.Int32)">
+            <summary>
+            设置经纬度和大地高精度
+            </summary>
+            <param name="n1">经纬度保留小数点后位数</param>
+            <param name="n2">大地高保留小数点后位数</param>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Geodetic_Point.ToString(System.Int32)">
+            <summary>
+            转换为字符串
+            </summary>
+            <param name="mode">0表示返回度分秒,1表示返回ddffmm.mmm,其他返回表示弧度</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Geodetic_Point.ToFormatString(System.Int32,System.Int32)">
+            <summary>
+            转换为字符串，保留到小数点后n位
+            </summary>
+            <param name="n">保留到小数点后n位</param>
+            <param name="mode">0表示返回度分秒,1表示返回ddffmm.mmm,其他返回表示弧度</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Geodetic_Point.OutPut(System.Collections.Generic.List{YTsUtility.GeodeticSurveying.Geodetic_Point},System.String,System.Int32)">
+            <summary>
+            输出大地坐标数组
+            </summary>
+            <param name="points">坐标List</param>
+            <param name="path">路径</param>
+            <param name="mode">0表示返回度分秒,1表示返回ddffmm.mmm,其他返回表示弧度</param>
+        </member>
+        <member name="P:YTsUtility.GeodeticSurveying.Geodetic_Point.B">
+            <summary>
+            大地纬度
+            </summary>
+        </member>
+        <member name="P:YTsUtility.GeodeticSurveying.Geodetic_Point.L">
+            <summary>
+            大地经度
+            </summary>
+        </member>
+        <member name="P:YTsUtility.GeodeticSurveying.Geodetic_Point.H">
+            <summary>
+            大地高
+            </summary>
+        </member>
+        <member name="P:YTsUtility.GeodeticSurveying.Geodetic_Point.Br">
+            <summary>
+            弧度表示的纬度(用于计算)
+            </summary>
+        </member>
+        <member name="P:YTsUtility.GeodeticSurveying.Geodetic_Point.Lr">
+            <summary>
+            弧度表示的经度(用于计算)
+            </summary>
+        </member>
+        <member name="P:YTsUtility.GeodeticSurveying.Geodetic_Point.Hr">
+            <summary>
+            高度(用于计算)
+            </summary>
+        </member>
+        <member name="T:YTsUtility.GeodeticSurveying.Geo2Point">
+            <summary>
+            点的经纬度坐标
+            </summary>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Geo2Point.#ctor">
+            <summary>
+            构造一个默认实例
+            </summary>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Geo2Point.#ctor(YTsUtility.Angle,YTsUtility.Angle)">
+            <summary>
+            通过经纬度构造
+            </summary>
+            <param name="B">大地纬度</param>
+            <param name="L">大地经度</param>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Geo2Point.#ctor(System.Boolean,System.Double,System.Double)">
+            <summary>
+            通过经纬度(ddffmm.mmm或弧度)构造
+            </summary>
+            <param name="B">大地纬度(ddffmm.mmm或弧度)</param>
+            <param name="L">大地经度(ddffmm.mmm或弧度)</param>
+            <param name="bl_mode">true代表经纬度为ddffmm.mmm形式，false表示经纬度为弧度</param>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Geo2Point.To2D">
+            <summary>
+            转换为二维坐标，经纬度用弧度表示
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Geo2Point.SetAccurate(System.Int32)">
+            <summary>
+            设置经纬度和大地高精度
+            </summary>
+            <param name="n">经纬度保留小数点后位数</param>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Geo2Point.ToString(System.Int32)">
+            <summary>
+            转换为字符串
+            </summary>
+            <param name="mode">0表示返回度分秒,1表示返回ddffmm.mmm,其他返回表示弧度</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Geo2Point.ToString">
+            <summary>
+            返回字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Geo2Point.ToFormatString(System.Int32,System.Int32)">
+            <summary>
+            转换为字符串，保留到小数点后n位
+            </summary>
+            <param name="n">保留到小数点后n位</param>
+            <param name="mode">0表示返回度分秒,1表示返回ddffmm.mmm,其他返回表示弧度</param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.GeodeticSurveying.Geo2Point.OutPut(System.Collections.Generic.List{YTsUtility.GeodeticSurveying.Geo2Point},System.String,System.Int32)">
+            <summary>
+            输出经纬度坐标数组
+            </summary>
+            <param name="points">坐标List</param>
+            <param name="path">路径</param>
+            <param name="mode">0表示度分秒,1表示返回ddffmm.mmm,其他表示弧度</param>
+        </member>
+        <member name="P:YTsUtility.GeodeticSurveying.Geo2Point.B">
+            <summary>
+            大地纬度
+            </summary>
+        </member>
+        <member name="P:YTsUtility.GeodeticSurveying.Geo2Point.L">
+            <summary>
+            大地经度
+            </summary>
+        </member>
+        <member name="P:YTsUtility.GeodeticSurveying.Geo2Point.Br">
+            <summary>
+            弧度表示的纬度(用于计算)
+            </summary>
+        </member>
+        <member name="P:YTsUtility.GeodeticSurveying.Geo2Point.Lr">
+            <summary>
+            弧度表示的经度(用于计算)
+            </summary>
+        </member>
+        <member name="T:YTsUtility.Project">
+            <summary>
+            工程类
+            </summary>
+        </member>
+        <member name="M:YTsUtility.Project.#ctor(System.String,System.String)">
+            <summary>
+            构造一个工程
+            </summary>
+            <param name="folder">工程文件夹路径</param>
+            <param name="name">工程名</param>
+        </member>
+        <member name="M:YTsUtility.Project.#ctor">
+            <summary>
+            无参构造函数(可序列化)
+            </summary>
+        </member>
+        <member name="P:YTsUtility.Project.CreateTime">
+            <summary>
+            工程创建时间
+            </summary>
+        </member>
+        <member name="P:YTsUtility.Project.Name">
+            <summary>
+            工程名
+            </summary>
+        </member>
+        <member name="P:YTsUtility.Project.User">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:YTsUtility.Project.FolderPath">
+            <summary>
+            工程文件夹路径
+            </summary>
+        </member>
+        <member name="T:YTsUtility.Quaternions">
+            <summary>
+            四元数类
+            </summary>
+        </member>
+        <member name="M:YTsUtility.Quaternions.#ctor">
+            <summary>
+            默认构造函数，均为0
+            </summary>
+        </member>
+        <member name="M:YTsUtility.Quaternions.#ctor(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            通过有序数对构造
+            </summary>
+            <param name="t">实部</param>
+            <param name="x">虚部1</param>
+            <param name="y">虚部2</param>
+            <param name="z">虚部3</param>
+        </member>
+        <member name="M:YTsUtility.Quaternions.#ctor(System.Double,YTsUtility.Vector3)">
+            <summary>
+            通过实部和虚部构造
+            </summary>
+            <param name="t">实部</param>
+            <param name="v">虚部数对</param>
+        </member>
+        <member name="M:YTsUtility.Quaternions.#ctor(YTsUtility.Vector3,System.Double)">
+            <summary>
+            通过旋转轴与旋转角构造
+            </summary>
+            <param name="axis">旋转轴</param>
+            <param name="angle">旋转角</param>
+        </member>
+        <member name="M:YTsUtility.Quaternions.GetNorm">
+            <summary>
+            四元数的模
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Quaternions.Normlize">
+            <summary>
+            单位化后的四元数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Quaternions.Conjugate">
+            <summary>
+            共轭四元数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Quaternions.Inverse">
+            <summary>
+            四元数的逆
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Quaternions.ToString">
+            <summary>
+            形如t+Xi+Yj+Zk的字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Quaternions.op_Addition(YTsUtility.Quaternions,YTsUtility.Quaternions)">
+            <summary>
+            四元数的和
+            </summary>
+            <param name="q1"></param>
+            <param name="q2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Quaternions.op_Multiply(YTsUtility.Quaternions,YTsUtility.Quaternions)">
+            <summary>
+            四元数的积
+            </summary>
+            <param name="q1"></param>
+            <param name="q2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Quaternions.op_Division(YTsUtility.Quaternions,System.Double)">
+            <summary>
+            同除以一个实数
+            </summary>
+            <param name="q"></param>
+            <param name="f"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Quaternions.ToMatrix">
+            <summary>
+            转换成四元矩阵
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:YTsUtility.Quaternions.T">
+            <summary>
+            实数部分
+            </summary>
+        </member>
+        <member name="P:YTsUtility.Quaternions.V">
+            <summary>
+            虚部数对
+            </summary>
+        </member>
+        <member name="T:YTsUtility.StrQuaternions">
+            <summary>
+            字符四元数类
+            </summary>
+        </member>
+        <member name="M:YTsUtility.StrQuaternions.#ctor">
+            <summary>
+            默认构造函数，均为0
+            </summary>
+        </member>
+        <member name="M:YTsUtility.StrQuaternions.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            通过有序数对构造
+            </summary>
+            <param name="t">实部</param>
+            <param name="x">虚部1</param>
+            <param name="y">虚部2</param>
+            <param name="z">虚部3</param>
+        </member>
+        <member name="M:YTsUtility.StrQuaternions.#ctor(System.String,YTsUtility.StrVector3)">
+            <summary>
+            通过实部和虚部构造
+            </summary>
+            <param name="t">实部</param>
+            <param name="v">虚部数对</param>
+        </member>
+        <member name="M:YTsUtility.StrQuaternions.#ctor(YTsUtility.StrVector3,System.String)">
+            <summary>
+            通过旋转轴与旋转角构造
+            </summary>
+            <param name="axis">旋转轴</param>
+            <param name="angle">旋转角</param>
+        </member>
+        <member name="M:YTsUtility.StrQuaternions.GetNorm">
+            <summary>
+            四元数的模
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.StrQuaternions.Normlize">
+            <summary>
+            单位化后的四元数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.StrQuaternions.Conjugate">
+            <summary>
+            共轭四元数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.StrQuaternions.Inverse">
+            <summary>
+            四元数的逆
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.StrQuaternions.ToString">
+            <summary>
+            形如t+Xi+Yj+Zk的字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.StrQuaternions.op_Addition(YTsUtility.StrQuaternions,YTsUtility.StrQuaternions)">
+            <summary>
+            四元数的和
+            </summary>
+            <param name="q1"></param>
+            <param name="q2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.StrQuaternions.op_Multiply(YTsUtility.StrQuaternions,YTsUtility.StrQuaternions)">
+            <summary>
+            四元数的积
+            </summary>
+            <param name="q1"></param>
+            <param name="q2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.StrQuaternions.op_Division(YTsUtility.StrQuaternions,System.String)">
+            <summary>
+            同除以一个实数
+            </summary>
+            <param name="q"></param>
+            <param name="f"></param>
+            <returns></returns>
+        </member>
+        <member name="P:YTsUtility.StrQuaternions.T">
+            <summary>
+            实数部分
+            </summary>
+        </member>
+        <member name="P:YTsUtility.StrQuaternions.V">
+            <summary>
+            虚部数对
+            </summary>
+        </member>
+        <member name="T:YTsUtility.ImageProcess.TemplateFormer">
+            <summary>
+            模板识别类
+            </summary>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.TemplateFormer.Get_Most_LRTB">
+            <summary>
+            提取有效区域
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.TemplateFormer.Get_DEight_Array">
+            <summary>
+            获得8*8特征值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.TemplateFormer.GetBlackCount(System.Drawing.Bitmap,System.Drawing.Rectangle)">
+            <summary>
+            统计一个区域的黑点数目
+            </summary>
+            <param name="bp"></param>
+            <param name="rec"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.ImageProcess.TemplateFormer.SaveCurrentPattern(System.Int32)">
+            <summary>
+            保存当前模板
+            </summary>
+            <param name="num"></param>
+        </member>
+        <member name="P:YTsUtility.ImageProcess.TemplateFormer.bitmap">
+            <summary>
+            需要识别的图像
+            </summary>
+        </member>
+        <member name="T:YTsUtility.Vector2">
+            <summary>
+            二维向量
+            </summary>
+        </member>
+        <member name="M:YTsUtility.Vector2.#ctor(System.Double,System.Double)">
+            <summary>
+            通过数对构造
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+        </member>
+        <member name="M:YTsUtility.Vector2.#ctor">
+            <summary>
+            默认构造
+            </summary>
+        </member>
+        <member name="M:YTsUtility.Vector2.op_Addition(YTsUtility.Vector2,YTsUtility.Vector2)">
+            <summary>
+            向量加法
+            </summary>
+            <param name="v1"></param>
+            <param name="v2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Vector2.op_Multiply(YTsUtility.Vector2,YTsUtility.Vector2)">
+            <summary>
+            数量积
+            </summary>
+            <param name="v1"></param>
+            <param name="v2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Vector2.ToString">
+            <summary>
+            形如(x,y)的字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Vector2.op_Equality(YTsUtility.Vector2,YTsUtility.Vector2)">
+            <summary>
+            向量相等
+            </summary>
+            <param name="v1"></param>
+            <param name="v2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Vector2.op_Inequality(YTsUtility.Vector2,YTsUtility.Vector2)">
+            <summary>
+            向量不等
+            </summary>
+            <param name="v1"></param>
+            <param name="v2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Vector2.Equals(System.Object)">
+            <summary>
+            重载equals
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Vector2.GetHashCode">
+            <summary>
+            重载GetHashCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Vector2.op_UnaryNegation(YTsUtility.Vector2)">
+            <summary>
+            向量减法
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Vector2.GetNorm">
+            <summary>
+            向量模
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Vector2.Clone">
+            <summary>
+            复制该向量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:YTsUtility.Vector2.X">
+            <summary>
+            X
+            </summary>
+        </member>
+        <member name="P:YTsUtility.Vector2.Y">
+            <summary>
+            Y
+            </summary>
+        </member>
+        <member name="T:YTsUtility.Vector3">
+            <summary>
+            三维向量
+            </summary>
+        </member>
+        <member name="M:YTsUtility.Vector3.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            通过有序数对构造
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+        </member>
+        <member name="M:YTsUtility.Vector3.#ctor">
+            <summary>
+            默认构造
+            </summary>
+        </member>
+        <member name="M:YTsUtility.Vector3.op_Addition(YTsUtility.Vector3,YTsUtility.Vector3)">
+            <summary>
+            向量加法
+            </summary>
+            <param name="v1"></param>
+            <param name="v2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Vector3.op_Multiply(YTsUtility.Vector3,YTsUtility.Vector3)">
+            <summary>
+            数量积
+            </summary>
+            <param name="v1"></param>
+            <param name="v2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Vector3.op_Multiply(YTsUtility.Vector3,System.Double)">
+            <summary>
+            数乘
+            </summary>
+            <param name="v"></param>
+            <param name="f"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Vector3.op_Multiply(System.Double,YTsUtility.Vector3)">
+            <summary>
+            数乘
+            </summary>
+            <param name="v"></param>
+            <param name="f"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Vector3.op_Division(YTsUtility.Vector3,System.Double)">
+            <summary>
+            同时除以一个实数
+            </summary>
+            <param name="v"></param>
+            <param name="f"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Vector3.op_Equality(YTsUtility.Vector3,YTsUtility.Vector3)">
+            <summary>
+            向量相等
+            </summary>
+            <param name="v1"></param>
+            <param name="v2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Vector3.op_Inequality(YTsUtility.Vector3,YTsUtility.Vector3)">
+            <summary>
+            向量不等
+            </summary>
+            <param name="v1"></param>
+            <param name="v2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Vector3.op_UnaryNegation(YTsUtility.Vector3)">
+            <summary>
+            向量减法
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Vector3.XMultpy(YTsUtility.Vector3)">
+            <summary>
+            向量积
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Vector3.ToString">
+            <summary>
+            形如(x,y,z)的字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Vector3.GetNorm">
+            <summary>
+            向量模
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Vector3.Clone">
+            <summary>
+            复制该向量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Vector3.Equals(System.Object)">
+            <summary>
+            重载equals
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.Vector3.GetHashCode">
+            <summary>
+            重载GetHashCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:YTsUtility.Vector3.Z">
+            <summary>
+            Z
+            </summary>
+        </member>
+        <member name="T:YTsUtility.StrVector3">
+            <summary>
+            字符向量
+            </summary>
+        </member>
+        <member name="M:YTsUtility.StrVector3.#ctor(System.String,System.String,System.String)">
+            <summary>
+            通过有序数对构造
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+        </member>
+        <member name="M:YTsUtility.StrVector3.#ctor">
+            <summary>
+            默认构造
+            </summary>
+        </member>
+        <member name="M:YTsUtility.StrVector3.op_Addition(YTsUtility.StrVector3,YTsUtility.StrVector3)">
+            <summary>
+            向量加法
+            </summary>
+            <param name="v1"></param>
+            <param name="v2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.StrVector3.op_Multiply(YTsUtility.StrVector3,YTsUtility.StrVector3)">
+            <summary>
+            数量积
+            </summary>
+            <param name="v1"></param>
+            <param name="v2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.StrVector3.op_Multiply(YTsUtility.StrVector3,System.String)">
+            <summary>
+            数乘
+            </summary>
+            <param name="v"></param>
+            <param name="f"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.StrVector3.op_Multiply(System.String,YTsUtility.StrVector3)">
+            <summary>
+            数乘
+            </summary>
+            <param name="v"></param>
+            <param name="f"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.StrVector3.op_Division(YTsUtility.StrVector3,System.String)">
+            <summary>
+            同时除以一个实数
+            </summary>
+            <param name="v"></param>
+            <param name="f"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.StrVector3.op_UnaryNegation(YTsUtility.StrVector3)">
+            <summary>
+            向量取负
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.StrVector3.op_Subtraction(YTsUtility.StrVector3,YTsUtility.StrVector3)">
+            <summary>
+            向量减法
+            </summary>
+            <param name="v1"></param>
+            <param name="v2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.StrVector3.XMultpy(YTsUtility.StrVector3)">
+            <summary>
+            向量积
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.StrVector3.ToString">
+            <summary>
+            形如(x,y,z)的字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YTsUtility.StrVector3.GetNorm">
+            <summary>
+            向量模
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:YTsUtility.StrVector3.X">
+            <summary>
+            X
+            </summary>
+        </member>
+        <member name="P:YTsUtility.StrVector3.Y">
+            <summary>
+            Y
+            </summary>
+        </member>
+        <member name="P:YTsUtility.StrVector3.Z">
+            <summary>
+            Z
+            </summary>
+        </member>
+        <member name="T:YTsUtility.Waiting">
+            <summary>
+            等待框
+            </summary>
+        </member>
+        <member name="M:YTsUtility.Waiting.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YTsUtility.Waiting.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="workMessage">工作信息</param>
+        </member>
+        <member name="F:YTsUtility.Waiting.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:YTsUtility.Waiting.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:YTsUtility.Waiting.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:YTsUtility.Waiting.WorkMessage">
+            <summary>
+            工作信息
+            </summary>
+        </member>
+        <member name="F:YTsUtility.YTsProgress.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:YTsUtility.YTsProgress.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:YTsUtility.YTsProgress.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+    </members>
+</doc>
